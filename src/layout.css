@@ -1,0 +1,84 @@
+/* src/layout.css */
+
+/* --- 1. LE HEADER (100% FLEXBOX) --- */
+.global-header-container {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 152px;
+  
+  /* --- CORRECTION Z-INDEX --- */
+  position: relative; /* Base pour les enfants */
+  z-index: 900; /* Assure que le header est sous le menu (1000) mais au-dessus du contenu */
+}
+
+/* --- 2. LE LOGO (Au centre) --- */
+.global-logo-link {
+  display: inline-block;
+}
+.global-logo {
+  height: 70px; 
+  display: block;
+}
+
+/* --- 3. LE BOUTON HAMBURGER (À gauche) --- */
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  
+  /* --- CORRECTION Z-INDEX --- */
+  z-index: 1000; /* Doit toujours être le plus haut pour être cliquable */
+  
+  width: 44px; 
+}
+.hamburger-btn span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+.hamburger-btn.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger-btn.open span:nth-child(2) { opacity: 0; }
+.hamburger-btn.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* --- 4. LE SPACER (À droite) --- */
+.header-spacer {
+  width: 44px; /* Même largeur que le bouton pour un centrage parfait */
+}
+
+/* --- 5. LE CONTENEUR DE PAGE --- */
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 152px;
+  
+  /* --- ASSUREZ-VOUS QUE LE CONTENU N'EST PAS BLOQUÉ --- */
+  position: relative;
+  z-index: 100; /* Assure que le contenu est bien au-dessus de l'arrière-plan */
+}
+.page-content {
+  padding-top: 20px;
+  padding-bottom: 32px;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .global-header-container {
+    padding: 10px 20px; 
+  }
+  .page-container {
+    padding: 0 20px;
+  }
+  .global-logo {
+    height: 50px;
+  }
+  .hamburger-btn,
+  .header-spacer {
+    width: 44px; 
+  }
+}

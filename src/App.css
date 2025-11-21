@@ -1,0 +1,143 @@
+/* src/App.css */
+
+/* --- 1. LE LAYOUT : UNE GRILLE DE 5 COLONNES --- */
+.app-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* --- 2. SECTION RATP (gauche) --- */
+.main-reseau {
+  grid-column: 1 / 5;
+  /* Fix Scrollbar : Bordure à droite */
+  border-right: 1px solid #dee2e6; 
+  padding-right: 16px; 
+}
+
+/* --- 3. SECTION GPE (droite) --- */
+.sidebar-gpe {
+  grid-column: 5 / 6;
+  padding-left: 0;
+  border-left: none;
+}
+
+/* --- 4. TITRES (Alignement et non-retour à la ligne) --- */
+.main-reseau h2,
+.sidebar-gpe h2 {
+  margin-top: 0; 
+  margin-bottom: 16px; 
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212529;
+}
+.sidebar-gpe h2 {
+  white-space: nowrap; /* Empêche 'Grand Paris Express' de se séparer */
+}
+
+/* --- 5. GRILLES DE CARTES --- */
+.lignes-grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; 
+}
+.gpe-grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px; 
+}
+
+/* --- 6. LES CARTES (Style) --- */
+.ligne-carte-link {
+  text-decoration: none;
+}
+.ligne-carte {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  height: 150px; 
+}
+.ligne-carte:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+.gpe-carte {
+  height: 150px; 
+}
+.carte-logo-container {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 50px;
+}
+.logo-metro-m {
+  height: 40px;
+  width: 40px;
+}
+.logo-ligne-numero {
+  height: 40px;
+  width: 40px;
+}
+.carte-info {
+  flex-grow: 1;
+  min-width: 0;
+  text-align: center;
+}
+.carte-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #212529;
+  white-space: normal;
+  overflow: hidden;
+}
+.carte-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+  white-space: normal;
+  overflow: hidden;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+  .main-reseau, 
+  .sidebar-gpe {
+    grid-column: 1 / -1; 
+    border-right: none; 
+    padding-right: 0; 
+  }
+  .sidebar-gpe {
+    width: 100%;
+    padding-left: 0;
+    border-left: none;
+  }
+  .lignes-grille,
+  .gpe-grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ligne-carte {
+    height: 130px;
+    padding: 12px;
+  }
+  .carte-info h3 {
+    font-size: 1rem;
+  }
+  .carte-info p {
+    font-size: 0.85rem;
+  }
+}

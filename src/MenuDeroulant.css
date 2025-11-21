@@ -1,0 +1,117 @@
+/* src/MenuDeroulant.css */
+.menu-deroulant {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 400px; 
+  max-width: 90%;
+  background-color: #fdfdfd;
+  border-left: 1px solid #e0e0e0;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  
+  /* --- CORRECTION ANTI-CLIC --- */
+  /* Empêche les clics si le menu est caché */
+  pointer-events: none;
+}
+.menu-deroulant.open {
+  transform: translateX(0);
+  /* Permet les clics si le menu est ouvert */
+  pointer-events: auto; 
+}
+.menu-content {
+  padding: 30px 24px 24px 24px;
+  
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  
+  /* Cache la scrollbar (Firefox/IE/Edge) */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Cache la scrollbar pour WebKit */
+.menu-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* STYLE POUR LES TITRES */
+.menu-titre-section {
+  color: #444;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+.menu-content .menu-titre-section:first-child {
+  margin-top: 0;
+}
+
+/* STYLE RECTANGLE POUR LIENS RÉPERTOIRE/CARTE */
+.menu-link-repertoire {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600; 
+  color: #333; 
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+  background-color: #f0f0f0; 
+}
+.menu-link-repertoire:hover {
+  background-color: #e0e0e0; 
+  text-decoration: none;
+}
+
+
+/* STYLE POUR LA GRILLE DES LIGNES */
+.menu-grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+}
+
+/* STYLE RECTANGLE POUR LES LIGNES */
+.menu-item {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 8px; 
+  padding: 10px 5px; 
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  background-color: #f0f0f0; 
+}
+.menu-item:hover {
+  background-color: #e0e0e0; 
+}
+
+.menu-item-logo {
+  height: 45px;
+  width: 45px;
+  object-fit: contain; 
+}
+.menu-item span {
+  font-size: 0.9rem; 
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .menu-deroulant {
+    width: 90vw;
+    max-width: 400px;
+  }
+  .menu-grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

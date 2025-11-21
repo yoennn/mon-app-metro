@@ -1,0 +1,66 @@
+/* src/PageCarte.css */
+.carte-container {
+  width: 100%;
+}
+
+.carte-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 24px;
+  margin-bottom: 10px;
+}
+
+.carte-container p {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 24px;
+}
+
+.carte-image-wrapper {
+  /* Permet le défilement horizontal */
+  overflow-x: auto; 
+  
+  /* --- CORRECTION : CACHER LA SCROLLBAR --- */
+  -ms-overflow-style: none; /* Cache la barre pour IE/Edge */
+  scrollbar-width: none;  /* Cache la barre pour Firefox */
+  /* --- FIN CORRECTION SCROLLBAR --- */
+
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Règle spécifique pour WebKit (Chrome, Safari) */
+.carte-image-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carte-image-wrapper img {
+  /* Force l'image à être plus large que le conteneur */
+  min-width: 1200px;
+  width: 100%; 
+  height: auto;
+}
+
+.note-carte {
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .carte-container h1 {
+    font-size: 2rem;
+  }
+  .carte-image-wrapper {
+    padding: 10px;
+  }
+  .carte-image-wrapper img {
+    min-width: 900px;
+  }
+}

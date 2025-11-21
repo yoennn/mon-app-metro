@@ -1,0 +1,138 @@
+/* src/PageDetailRame.css */
+
+.rame-detail-container {
+  width: 100%;
+}
+
+/* --- HEADER (Titre + sous-titre) --- */
+.rame-detail-header {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+.rame-detail-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+.rame-detail-header p {
+  font-size: 1.3rem;
+  color: #6c757d;
+  margin: 4px 0 0 0;
+}
+
+/* --- LAYOUT 2 COLONNES --- */
+.rame-detail-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- COLONNE INFOBOX (gauche) --- */
+.rame-detail-infobox {
+  width: 300px;
+  flex-shrink: 0;
+  /* Fix sticky */
+  position: sticky;
+  top: 120px; 
+}
+.infobox-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+.infobox-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212529;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* --- STYLE FICHE TECHNIQUE --- */
+.rame-stats-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rame-stats-liste li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.rame-stats-liste li span {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+.rame-stats-liste li strong {
+  font-size: 1.1rem;
+  color: #000;
+  line-height: 1.4;
+}
+
+/* --- COLONNE CONTENU (droite) --- */
+.rame-detail-main {
+  flex-grow: 1;
+}
+.rame-detail-image-box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.rame-detail-image-box img {
+  width: 100%;
+  height: auto;
+}
+.rame-detail-main h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+.rame-detail-main p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #343a40;
+}
+
+/* Style Lignes */
+.rame-lignes-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ligne-logo-link {
+  display: block;
+}
+.ligne-logo-repertoire {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ligne-logo-repertoire:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .rame-detail-content {
+    flex-direction: column;
+  }
+  .rame-detail-infobox {
+    width: 100%;
+    position: static;
+  }
+  .rame-detail-header h1 {
+    font-size: 2.2rem;
+  }
+}
