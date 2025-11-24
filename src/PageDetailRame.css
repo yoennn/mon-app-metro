@@ -2,6 +2,9 @@
 
 .rame-detail-container {
   width: 100%;
+  
+  /* --- AJOUT ICI --- */
+  animation: fadeInUp 0.5s ease-out;
 }
 
 /* --- HEADER (Titre + sous-titre) --- */

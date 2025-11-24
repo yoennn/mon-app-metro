@@ -1,4 +1,10 @@
 /* src/PageRepertoire.css */
+
+.repertoire-container {
+  /* --- AJOUT ICI --- */
+  animation: fadeInUp 0.5s ease-out;
+}
+
 .repertoire-container h1 {
   font-size: 2.5rem;
   font-weight: 700;

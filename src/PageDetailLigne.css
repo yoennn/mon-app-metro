@@ -23,6 +23,9 @@
 
 .detail-container {
   width: 100%;
+  
+  /* --- AJOUT ICI --- */
+  animation: fadeInUp 0.5s ease-out;
 }
 .detail-header {
   display: flex;

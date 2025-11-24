@@ -20,3 +20,15 @@ body {
   background-color: #f8f9fa;
   color: #343a40;
 }
+
+/* --- ANIMATION D'APPARITION DE PAGE --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

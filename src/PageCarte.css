@@ -1,6 +1,9 @@
 /* src/PageCarte.css */
 .carte-container {
   width: 100%;
+  
+  /* --- AJOUT ICI --- */
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .carte-container h1 {
