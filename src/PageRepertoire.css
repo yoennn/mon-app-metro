@@ -1,7 +1,6 @@
 /* src/PageRepertoire.css */
 
 .repertoire-container {
-  /* --- AJOUT ICI --- */
   animation: fadeInUp 0.4s ease-out;
 }
 
@@ -44,7 +43,38 @@
 
 .rame-carte-infos {
   flex-grow: 1;
+  /* --- AJOUT : Permet de placer la barre en haut --- */
+  display: flex;
+  flex-direction: column;
 }
+
+/* --- STYLES POUR LA BARRE DE COULEUR --- */
+.rame-carte-couleurs {
+  display: flex;
+  height: 6px; /* Hauteur sobre */
+  border-radius: 3px; /* Léger arrondi */
+  overflow: hidden; /* Force les segments à respecter l'arrondi */
+  margin-bottom: 16px; /* Espace avant le titre */
+  width: 100%;
+}
+
+.couleur-segment {
+  flex-grow: 1; /* Chaque segment prend une part égale */
+  height: 100%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Petit effet hover sobre */
+.rame-carte-couleurs:hover .couleur-segment {
+  opacity: 0.7;
+}
+.rame-carte-couleurs .couleur-segment:hover {
+  opacity: 1;
+  transform: scale(1.05); /* Léger zoom sur le segment survolé */
+  z-index: 2;
+}
+/* --- FIN STYLES BARRE --- */
+
 
 .rame-carte-infos h3 {
   margin: 0 0 8px 0;

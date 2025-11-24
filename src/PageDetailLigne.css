@@ -6,8 +6,6 @@
   overflow-y: scroll; 
   scroll-snap-type: y mandatory; 
   scroll-padding-top: 100px; 
-
-  /* Cache la scrollbar */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -23,8 +21,6 @@
 
 .detail-container {
   width: 100%;
-  
-  /* --- AJOUT ICI --- */
   animation: fadeInUp 0.5s ease-out;
 }
 .detail-header {
@@ -43,6 +39,10 @@
   font-weight: 700;
   margin: 0;
   line-height: 1.1;
+  
+  /* --- MODIFICATION : COULEUR DE LIGNE --- */
+  color: var(--couleur-ligne);
+  transition: color 0.3s;
 }
 .detail-terminus {
   font-size: 1.2rem;
@@ -56,12 +56,16 @@
   margin-top: 32px;
   margin-bottom: 32px;
 }
-.section-wrapper h2 {
+
+/* --- MODIFICATION : COULEUR DE LIGNE POUR LES TITRES H2 --- */
+.section-wrapper h2,
+.rame-section-container h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 2px solid var(--couleur-ligne); /* Plus épais et coloré */
   padding-bottom: 8px;
   margin-bottom: 16px;
+  color: #212529; /* Couleur de texte plus foncée */
 }
 .image-box {
   background-color: #fff;
@@ -77,7 +81,7 @@
 }
 .rame-section-container {
   padding-top: 32px;
-  border-top: 1px solid #dee2e6;
+  /* Retrait de la bordure haute, gérée par le h2 */
 }
 .rame-list-scroller {
   display: flex;
@@ -85,21 +89,19 @@
   gap: 24px;
 }
 .rame-content-wrapper {
-  /* CARRE BLANC ET ARRONDI */
   display: flex;
   gap: 24px;
-  background-color: #fff; /* Fond blanc du carré */
-  border-radius: 16px; /* Coins arrondis du carré */
+  background-color: #fff;
+  border-radius: 16px; 
   padding: 24px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 .rame-image-container {
   width: 40%;
   flex-shrink: 0;
-  background-color: #f8f9fa; /* Fond gris clair autour du train */
+  background-color: #f8f9fa; 
   border-radius: 8px;
   padding: 10px;
-  /* Assure que le train roule au-dessus du texte */
   cursor: pointer;
   position: relative; 
   z-index: 5;
@@ -109,9 +111,7 @@
   height: auto;
 }
 
-/* --- RÈGLE D'APPLICATION DE L'ANIMATION --- */
 .rame-content-wrapper.animate .rame-image {
-  /* Utilise la courbe fluide pour la vitesse */
   animation: fantastic-traverse 3s cubic-bezier(0.4, 0.0, 0.2, 1.0); 
 }
 
@@ -150,6 +150,9 @@
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
+  
+  /* --- MODIFICATION : ACCENT DE COULEUR --- */
+  border-top: 4px solid var(--couleur-ligne);
 }
 .stat-item {
   display: flex;

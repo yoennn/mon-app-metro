@@ -1,13 +1,13 @@
 // src/PageDetailLigne.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { lignesMetro, dataRames } from './data.js';
+// --- MODIFICATION : Importer ligneColors ---
+import { lignesMetro, dataRames, ligneColors } from './data.js';
 import './PageDetailLigne.css';
 
 function PageDetailLigne() {
   const { id } = useParams();
   const ligne = lignesMetro.find(l => l.id == id); 
-  // RESTAURATION DU STATE D'ANIMATION
   const [animatingRame, setAnimatingRame] = useState(null); 
 
   /* Hook pour le snap-scroll (à conserver pour le Layout) */
@@ -21,11 +21,13 @@ function PageDetailLigne() {
   if (!ligne) {
     return <h2>Ligne non trouvée (ID: {id})</h2>;
   }
+  
+  // --- MODIFICATION : Récupérer la couleur ---
+  const couleurLigne = ligneColors[ligne.id] || '#6c757d'; // Fallback gris
 
   const logoPath = `/assets/${id}-logo.png`;
   const planPath = `/assets/${id}-plan.png`;
 
-  // Fonction pour obtenir les stats de base
   const getStatValue = (key) => {
       switch (key) {
           case 'stations': return ligne.stations;
@@ -37,7 +39,11 @@ function PageDetailLigne() {
 
 
   return (
-    <div className="detail-container snap-parent">
+    // --- MODIFICATION : Injection de la variable CSS ---
+    <div 
+      className="detail-container snap-parent" 
+      style={{ '--couleur-ligne': couleurLigne }}
+    >
       
       {/* SECTION 1 : PLAN ET STATS */}
       <div className="snap-section plan-section">
@@ -86,17 +92,13 @@ function PageDetailLigne() {
               return (
                 <div 
                   key={index} 
-                  // Applique la classe 'animate' si cet index correspond à l'état
                   className={`rame-content-wrapper ${animatingRame === index ? 'animate' : ''}`}
                 >
                   <div 
                     className="rame-image-container"
-                    // LOGIQUE D'ANIMATION: Active l'état au clic
                     onClick={() => {
-                      // N'active que si aucune autre animation n'est en cours
                       if (animatingRame === null) setAnimatingRame(index);
                     }}
-                    // Retire la classe 'animate' quand l'animation CSS est finie
                     onAnimationEnd={() => setAnimatingRame(null)}
                   >
                     <img 
