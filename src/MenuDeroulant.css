@@ -115,3 +115,113 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* --- NOUVEAUX STYLES AJOUTÉS POUR LA RECHERCHE --- */
+
+.search-wrapper {
+  margin-bottom: 12px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box; /* Important */
+  background-color: #f7f7f7;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+/* --- STYLES RÉSULTATS --- */
+.search-results-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 16px;
+  
+  /* --- Style scrollbar --- */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f7f7f7;
+}
+.search-results-container::-webkit-scrollbar {
+  width: 8px;
+}
+.search-results-container::-webkit-scrollbar-track {
+  background: #f7f7f7;
+  border-radius: 4px;
+}
+.search-results-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+/* --- Fin scrollbar --- */
+
+
+.search-no-results {
+  padding: 16px;
+  color: #6c757d;
+  text-align: center;
+}
+
+.result-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.result-item:last-child {
+  border-bottom: none;
+}
+.result-item-titre {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.result-item-lignes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.result-item-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.result-item-logo:hover {
+  transform: scale(1.1);
+}
+
+.result-item-rames-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.result-item-rames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.result-item-rame-tag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.result-item-rame-tag:hover {
+  background-color: #e0e0e0;
+  text-decoration: none;
+}
