@@ -1,8 +1,6 @@
 /* src/PageCarte.css */
 .carte-container {
   width: 100%;
-  
-  /* --- AJOUT ICI --- */
   animation: fadeInUp 0.4s ease-out;
 }
 
@@ -21,14 +19,7 @@
 }
 
 .carte-image-wrapper {
-  /* Permet le défilement horizontal */
-  overflow-x: auto; 
-  
-  /* --- CORRECTION : CACHER LA SCROLLBAR --- */
-  -ms-overflow-style: none; /* Cache la barre pour IE/Edge */
-  scrollbar-width: none;  /* Cache la barre pour Firefox */
-  /* --- FIN CORRECTION SCROLLBAR --- */
-
+  /* overflow-x a été supprimé */
   width: 100%;
   background-color: #fff;
   border-radius: 16px;
@@ -37,14 +28,10 @@
   box-sizing: border-box;
 }
 
-/* Règle spécifique pour WebKit (Chrome, Safari) */
-.carte-image-wrapper::-webkit-scrollbar {
-    display: none;
-}
+/* Les règles de scrollbar ont été supprimées */
 
 .carte-image-wrapper img {
-  /* Force l'image à être plus large que le conteneur */
-  min-width: 1200px;
+  /* min-width a été supprimé */
   width: 100%; 
   height: auto;
 }
@@ -63,7 +50,9 @@
   .carte-image-wrapper {
     padding: 10px;
   }
-  .carte-image-wrapper img {
-    min-width: 900px;
-  }
+  
+  /* --- CORRECTION ICI --- */
+  /* Le sélecteur .carte-image-wrapper img 
+     a été totalement supprimé car il était vide.
+  */
 }
