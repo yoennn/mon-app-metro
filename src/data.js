@@ -444,7 +444,6 @@ export const stationsData = [
   { nom: "Gare de l'Est", lignes: ["4", "5", "7"] },
   { nom: "Gare de Lyon", lignes: ["1", "14"] },
   { nom: "Gare du Nord", lignes: ["4", "5"] },
-  { nom: "Gare de l'Hôpital Bicêtre", lignes: ["14"] },
   { nom: "George V", lignes: ["1"] },
   { nom: "Glacière", lignes: ["6"] },
   { nom: "Goncourt", lignes: ["11"] },
