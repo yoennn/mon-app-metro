@@ -16,6 +16,9 @@
 /* --- 2. LE LOGO (Au centre) --- */
 .global-logo-link {
   display: inline-block;
+  /* Assure que le logo est au-dessus de la barre de recherche quand elle s'anime */
+  position: relative;
+  z-index: 5;
 }
 .global-logo {
   height: 70px; 
@@ -46,9 +49,109 @@
 .hamburger-btn.open span:nth-child(2) { opacity: 0; }
 .hamburger-btn.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-/* --- 4. LE SPACER (À droite) --- */
-.header-spacer {
-  width: 44px; /* Même largeur que le bouton pour un centrage parfait */
+/* --- 4. NOUVELLE SECTION RECHERCHE (À droite) --- */
+
+/* Le conteneur à droite (contient l'input et le bouton) */
+.header-search-wrapper {
+  position: relative; /* Permet de superposer l'input et le bouton */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligne tout à droite */
+  width: 44px; /* Taille du bouton par défaut */
+  height: 50px; 
+}
+
+/* Le bouton qui est toujours visible */
+.header-search-toggle-btn {
+  position: relative;
+  z-index: 10; /* Toujours au-dessus de l'input */
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 13px; /* Centre l'icône de 24px */
+  box-sizing: border-box;
+  flex-shrink: 0; /* Ne se réduit pas */
+}
+
+/* L'icône de la loupe */
+.search-icon-loupe {
+  width: 24px; /* Taille correcte pour la loupe */
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.search-icon-loupe.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+/* L'icône 'X' (créée en CSS) */
+.search-icon-close {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  transform: scale(0.5);
+}
+.search-icon-close.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.search-icon-close span {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  top: 10.5px; /* (24 - 3) / 2 */
+  left: 0;
+}
+.search-icon-close span:nth-child(1) { transform: rotate(45deg); }
+.search-icon-close span:nth-child(2) { transform: rotate(-45deg); }
+
+
+/* La barre de recherche (input) */
+.header-search-input {
+  position: absolute;
+  right: 0; /* Collé au bord droit du wrapper */
+  top: 0;
+  
+  /* Style de carte */
+  height: 50px; 
+  background-color: #ffffff; 
+  border-radius: 16px; 
+  
+  width: 0; /* Caché par défaut */
+  padding: 12px 20px;
+  padding-right: 50px; /* Espace pour le bouton par-dessus */
+  
+  font-size: 1rem;
+  border: 1px solid transparent; 
+  box-sizing: border-box;
+  opacity: 0;
+  pointer-events: none; 
+  transition: width 0.3s ease-in-out, opacity 0.2s ease-in-out, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* L'état ouvert de la recherche */
+.header-search-input.open {
+  width: 450px; /* Largeur alignée */
+  opacity: 1;
+  pointer-events: auto; 
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* --- MODIFICATION ICI --- */
+.header-search-input.open:focus {
+  outline: none;
+  /* border-color: #007bff; (Supprimé pour enlever la ligne bleue) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* On garde l'ombre plus forte */
 }
 
 /* --- 5. LE CONTENEUR DE PAGE --- */
@@ -66,6 +169,74 @@
   padding-bottom: 32px;
 }
 
+/* --- 6. OVERLAY (POUR LE MENU HAMBURGER) --- */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  
+  /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.3); 
+  
+  /* Doit être SOUS le menu (1000) mais AU-DESSUS de tout le reste */
+  z-index: 999; 
+  
+  cursor: pointer;
+}
+
+/* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE --- */
+.header-search-results-container {
+  position: absolute; /* Se place sous le header */
+  
+  /* Positionnement aligné */
+  top: 83px; /* ( (100px header - 50px barre)/2 + 50px barre + 8px marge) */
+  right: 152px; 
+  width: 450px; /* Largeur fixe (identique à l'input.open) */
+  
+  /* Style de carte */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 16px; 
+  overflow: hidden; /* Force l'arrondi sur les résultats */
+  
+  z-index: 950; /* Au-dessus du contenu, sous le header */
+  
+  max-height: 70vh; /* Limite la hauteur */
+  overflow-y: auto;
+  
+  /* Styles de scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f7f7f7;
+}
+.header-search-results-container::-webkit-scrollbar { width: 8px; }
+.header-search-results-container::-webkit-scrollbar-track { background: #f7f7f7; }
+.header-search-results-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
+
+/* Styles pour les résultats (prompt, aucun résultat, items) */
+.search-prompt,
+.search-no-results {
+  padding: 24px;
+  color: #6c757d;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.result-item { padding: 12px 24px; border-bottom: 1px solid #f0f0f0; }
+.result-item:first-child { padding-top: 16px; }
+.result-item:last-child { border-bottom: none; padding-bottom: 16px; }
+
+.result-item-titre { font-size: 1.2rem; font-weight: 700; margin: 0 0 8px 0; }
+.result-item-lignes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.result-item-logo { width: 30px; height: 30px; border-radius: 50%; transition: transform 0.2s; }
+.result-item-logo:hover { transform: scale(1.1); }
+.result-item-rames-label { font-size: 0.8rem; color: #6c757d; margin: 0 0 4px 0; text-transform: uppercase; font-weight: 600; }
+.result-item-rames { display: flex; flex-wrap: wrap; gap: 6px; }
+.result-item-rame-tag { font-size: 0.9rem; font-weight: 500; color: #333; background-color: #f0f0f0; padding: 3px 8px; border-radius: 6px; text-decoration: none; transition: background-color 0.2s; }
+.result-item-rame-tag:hover { background-color: #e0e0e0; text-decoration: none; }
+
+
 /* --- MOBILE --- */
 @media (max-width: 768px) {
   .global-header-container {
@@ -77,8 +248,44 @@
   .global-logo {
     height: 50px;
   }
-  .hamburger-btn,
-  .header-spacer {
+  .hamburger-btn {
     width: 44px; 
   }
+  
+  .header-search-wrapper {
+    height: 44px; /* Plus petit sur mobile */
+  }
+  .header-search-toggle-btn {
+    height: 44px;
+    width: 44px;
+    padding: 10px;
+  }
+  .search-icon-close {
+    top: 10px;
+    left: 10px;
+  }
+  .header-search-input {
+    height: 44px;
+  }
+
+  /* Styles de recherche mobile */
+  .header-search-input.open {
+    /* Sur mobile, on prend presque toute la place */
+    width: calc(100vw - 120px); 
+    height: 44px;
+  }
+  
+  .header-search-results-container {
+    /* Position mobile */
+    top: 65px; /* ( (70-44)/2 + 44 + 8 ) */
+    
+    /* Alignement mobile */
+    left: 20px; 
+    right: 20px; 
+    width: auto; /* Prend la place disponible */
+    
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+  }
+  .result-item { padding: 12px 16px; }
 }
