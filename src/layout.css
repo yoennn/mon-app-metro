@@ -10,15 +10,16 @@
   
   /* --- CORRECTION Z-INDEX --- */
   position: relative; /* Base pour les enfants */
-  z-index: 900; /* Assure que le header est sous le menu (1000) mais au-dessus du contenu */
+  z-index: 900; 
 }
 
 /* --- 2. LE LOGO (Au centre) --- */
 .global-logo-link {
   display: inline-block;
-  /* Assure que le logo est au-dessus de la barre de recherche quand elle s'anime */
   position: relative;
-  z-index: 5;
+  
+  /* --- MODIFICATION ICI --- */
+  z-index: 940; /* En dessous de la barre de recherche (950) */
 }
 .global-logo {
   height: 70px; 
@@ -31,10 +32,7 @@
   border: none;
   cursor: pointer;
   padding: 10px;
-  
-  /* --- CORRECTION Z-INDEX --- */
-  z-index: 1000; /* Doit toujours être le plus haut pour être cliquable */
-  
+  z-index: 1000; /* Toujours le plus haut */
   width: 44px; 
 }
 .hamburger-btn span {
@@ -51,33 +49,35 @@
 
 /* --- 4. NOUVELLE SECTION RECHERCHE (À droite) --- */
 
-/* Le conteneur à droite (contient l'input et le bouton) */
 .header-search-wrapper {
-  position: relative; /* Permet de superposer l'input et le bouton */
+  position: relative; 
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Aligne tout à droite */
-  width: 44px; /* Taille du bouton par défaut */
+  justify-content: flex-end; 
+  width: 44px; 
   height: 50px; 
+  
+  /* --- MODIFICATION ICI --- */
+  z-index: 950; /* Au-dessus du logo (940) */
 }
 
 /* Le bouton qui est toujours visible */
 .header-search-toggle-btn {
   position: relative;
-  z-index: 10; /* Toujours au-dessus de l'input */
+  z-index: 10; /* Au-dessus de l'input */
   background: none;
   border: none;
   cursor: pointer;
   width: 50px;
   height: 50px;
-  padding: 13px; /* Centre l'icône de 24px */
+  padding: 13px; 
   box-sizing: border-box;
-  flex-shrink: 0; /* Ne se réduit pas */
+  flex-shrink: 0; 
 }
 
 /* L'icône de la loupe */
 .search-icon-loupe {
-  width: 24px; /* Taille correcte pour la loupe */
+  width: 24px; 
   height: 24px;
   opacity: 0.8;
   transition: opacity 0.2s, transform 0.2s;
@@ -108,7 +108,7 @@
   width: 24px;
   height: 3px;
   background-color: #333;
-  top: 10.5px; /* (24 - 3) / 2 */
+  top: 10.5px; 
   left: 0;
 }
 .search-icon-close span:nth-child(1) { transform: rotate(45deg); }
@@ -118,17 +118,19 @@
 /* La barre de recherche (input) */
 .header-search-input {
   position: absolute;
-  right: 0; /* Collé au bord droit du wrapper */
+  right: 0; 
   top: 0;
+  
+  z-index: 2; /* Inférieur au bouton (10) mais dans le wrapper */
   
   /* Style de carte */
   height: 50px; 
   background-color: #ffffff; 
   border-radius: 16px; 
   
-  width: 0; /* Caché par défaut */
+  width: 0; 
   padding: 12px 20px;
-  padding-right: 50px; /* Espace pour le bouton par-dessus */
+  padding-right: 50px; 
   
   font-size: 1rem;
   border: 1px solid transparent; 
@@ -140,7 +142,7 @@
 
 /* L'état ouvert de la recherche */
 .header-search-input.open {
-  width: 450px; /* Largeur alignée */
+  width: 450px; 
   opacity: 1;
   pointer-events: auto; 
   border: 1px solid #e0e0e0;
@@ -148,7 +150,7 @@
 }
 .header-search-input.open:focus {
   outline: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* On garde l'ombre plus forte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 /* --- 5. LE CONTENEUR DE PAGE --- */
@@ -156,10 +158,8 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 152px;
-  
-  /* --- ASSUREZ-VOUS QUE LE CONTENU N'EST PAS BLOQUÉ --- */
   position: relative;
-  z-index: 100; /* Assure que le contenu est bien au-dessus de l'arrière-plan */
+  z-index: 100; 
 }
 .page-content {
   padding-top: 20px;
@@ -173,56 +173,47 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  
-  /* Fond semi-transparent */
   background-color: rgba(0, 0, 0, 0.3); 
-  
-  /* Doit être SOUS le menu (1000) mais AU-DESSUS de tout le reste */
   z-index: 999; 
-  
   cursor: pointer;
 }
 
 /* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE --- */
 .header-search-results-container {
-  position: absolute; /* Se place sous le header */
-  
-  /* Positionnement aligné */
-  top: 83px; /* ( (100px header - 50px barre)/2 + 50px barre + 8px marge) */
+  position: absolute; 
+  top: 83px; 
   right: 152px; 
-  width: 450px; /* Largeur fixe (identique à l'input.open) */
+  width: 450px; 
   
-  /* Style de carte */
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 16px; 
-  overflow: hidden; /* Force l'arrondi sur les résultats */
+  overflow: hidden; 
   
-  z-index: 950; /* Au-dessus du contenu, sous le header */
+  z-index: 950; /* Au-dessus du contenu, mais sous le logo (qui n'est plus à 950) */
   
-  max-height: 70vh; /* Limite la hauteur */
+  max-height: 70vh; 
   overflow-y: auto;
   
-  /* --- MODIFICATION ICI : État initial pour l'animation --- */
+  /* État initial pour l'animation */
   opacity: 0;
-  transform: translateY(-10px); /* Glisse d'en haut */
-  clip-path: inset(0 100% 0 0); /* Se révèle depuis la droite */
+  transform: translateY(-10px); 
+  clip-path: inset(0 100% 0 0); 
   pointer-events: none;
   transition: opacity 0.2s ease-out, 
               transform 0.3s ease-out, 
               clip-path 0.3s ease-out;
   
-  /* Styles de scrollbar */
   scrollbar-width: thin;
   scrollbar-color: #ccc #f7f7f7;
 }
 
-/* --- MODIFICATION ICI : État ouvert pour l'animation --- */
+/* État ouvert pour l'animation */
 .header-search-results-container.open {
   opacity: 1;
   transform: translateY(0);
-  clip-path: inset(0 0 0 0); /* Révèle entièrement */
+  clip-path: inset(0 0 0 0); 
   pointer-events: auto;
 }
 
@@ -268,7 +259,7 @@
   }
   
   .header-search-wrapper {
-    height: 44px; /* Plus petit sur mobile */
+    height: 44px; 
   }
   .header-search-toggle-btn {
     height: 44px;
@@ -283,22 +274,16 @@
     height: 44px;
   }
 
-  /* Styles de recherche mobile */
   .header-search-input.open {
-    /* Sur mobile, on prend presque toute la place */
     width: calc(100vw - 120px); 
     height: 44px;
   }
   
   .header-search-results-container {
-    /* Position mobile */
-    top: 65px; /* ( (70-44)/2 + 44 + 8 ) */
-    
-    /* Alignement mobile */
+    top: 65px; 
     left: 20px; 
     right: 20px; 
-    width: auto; /* Prend la place disponible */
-    
+    width: auto; 
     border-radius: 16px;
     border: 1px solid #e0e0e0;
   }

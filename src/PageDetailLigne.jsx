@@ -10,19 +10,25 @@ function PageDetailLigne() {
   const ligne = lignesMetro.find(l => l.id == id); 
   const [animatingRame, setAnimatingRame] = useState(null); 
 
-  /* Hook pour le snap-scroll (à conserver pour le Layout) */
+  /* --- MODIFICATION ICI --- */
+  // Le hook ne bloque le scroll QUE sur PC
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    // On vérifie qu'on n'est PAS sur un petit écran
+    if (window.innerWidth > 768) {
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }
+    // Sur mobile, on ne fait rien (le scroll reste normal)
   }, []); 
+  /* --- FIN MODIFICATION --- */
+
 
   if (!ligne) {
     return <h2>Ligne non trouvée (ID: {id})</h2>;
   }
   
-  // --- MODIFICATION : Récupérer la couleur ---
   const couleurLigne = ligneColors[ligne.id] || '#6c757d'; // Fallback gris
 
   const logoPath = `/assets/${id}-logo.png`;
@@ -39,7 +45,6 @@ function PageDetailLigne() {
 
 
   return (
-    // --- MODIFICATION : Injection de la variable CSS ---
     <div 
       className="detail-container snap-parent" 
       style={{ '--couleur-ligne': couleurLigne }}

@@ -2,6 +2,9 @@
 
 html {
   box-sizing: border-box;
+  
+  /* Définit la taille de base sur PC (100% = 16px) */
+  font-size: 100%; 
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -30,5 +33,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* --- MODIFICATION ICI : Réglage de la police mobile --- */
+@media (max-width: 768px) {
+  html {
+    /* 15px / 16px = 0.9375 */
+    /* Cela va réduire la taille de tous les textes en 'rem' de 6.25% sur mobile */
+    font-size: 93.75%; 
   }
 }
