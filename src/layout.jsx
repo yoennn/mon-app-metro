@@ -10,6 +10,9 @@ import './layout.css';
 const normalizeString = (str) => 
   str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
+// Créer l'ensemble des ID de ligne valides (une seule fois)
+const allLineIDs = new Set(lignesMetro.map(l => l.id));
+
 export default function Layout() { 
   const [menuOuvert, setMenuOuvert] = useState(false);
   const [rechercheOuvert, setRechercheOuvert] = useState(false);
@@ -17,10 +20,21 @@ export default function Layout() {
 
   const filteredStations = useMemo(() => {
     const query = normalizeString(recherche);
-    if (query.length < 2) return [];
-    
-    return stationsData
-      .filter(station => normalizeString(station.nom).includes(query))
+    const lineSearchTerm = query.replace('ligne ', '').replace('m', '').trim();
+    let stationsToShow = [];
+
+    if (allLineIDs.has(lineSearchTerm)) {
+      stationsToShow = stationsData.filter(station => 
+        station.lignes.includes(lineSearchTerm)
+      );
+    } 
+    else if (query.length >= 2) {
+      stationsToShow = stationsData.filter(station => 
+        normalizeString(station.nom).includes(query)
+      );
+    }
+
+    return stationsToShow
       .map(station => {
         const lignes = station.lignes;
         const materielNoms = lignes.flatMap(ligneId => {
@@ -31,13 +45,14 @@ export default function Layout() {
         return { ...station, rames: uniqueRames };
       })
       .sort((a, b) => a.nom.localeCompare(b.nom));
+      
   }, [recherche]);
 
   // Fonctions pour le MENU
   const closeMenu = () => setMenuOuvert(false);
   const toggleMenu = () => {
     setMenuOuvert(!menuOuvert);
-    if (rechercheOuvert) closeRecherche(); // Ferme la recherche si on ouvre le menu
+    if (rechercheOuvert) closeRecherche(); 
   };
 
   // Fonctions pour la RECHERCHE
@@ -48,13 +63,12 @@ export default function Layout() {
   const toggleRecherche = () => {
     const newState = !rechercheOuvert;
     setRechercheOuvert(newState);
-    if (menuOuvert) closeMenu(); // Ferme le menu si on ouvre la recherche
+    if (menuOuvert) closeMenu(); 
     
     if (newState) {
-      // Focus sur l'input lors de l'ouverture
       setTimeout(() => document.getElementById('header-search-input')?.focus(), 200);
     } else {
-      setRecherche(''); // Vide la recherche si on ferme
+      setRecherche(''); 
     }
   };
   
@@ -68,7 +82,6 @@ export default function Layout() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0); 
-    // Ferme aussi la recherche et le menu lors d'un changement de page
     closeAll();
   }, [pathname]);
 
@@ -117,7 +130,7 @@ export default function Layout() {
             type="text"
             id="header-search-input"
             className={`header-search-input ${rechercheOuvert ? 'open' : ''}`}
-            placeholder="Rechercher une station..."
+            placeholder="Rechercher une station ou une ligne..."
             value={recherche}
             onChange={(e) => setRecherche(e.target.value)}
           />
@@ -139,51 +152,51 @@ export default function Layout() {
         </div>
       </header>
 
-      {/* --- Conteneur de résultats (inchangé) --- */}
-      {rechercheOuvert && (
-        <div className="header-search-results-container">
-          {recherche.length < 2 ? (
-              <p className="search-prompt">Tapez au moins 2 caractères...</p>
-          ) : filteredStations.length > 0 ? (
-            filteredStations.map(station => (
-              <div key={station.nom} className="result-item"> 
-                <h4 className="result-item-titre">{station.nom}</h4>
-                <div className="result-item-lignes">
-                  {station.lignes.map(id => (
-                    <Link key={id} to={`/ligne/${id}`} onClick={handleLinkClick}>
-                      <img 
-                        src={`/assets/${id}-logo.png`} 
-                        alt={`Ligne ${id}`} 
-                        className="result-item-logo"
-                        title={`Ligne ${id}`}
-                      />
-                    </Link>
-                  ))}
-                </div>
-                <p className="result-item-rames-label">Rames possibles :</p>
-                <div className="result-item-rames">
-                  {station.rames.map(nomRame => (
-                    <Link key={nomRame} to={`/rame/${nomRame}`} className="result-item-rame-tag" onClick={handleLinkClick}>
-                      {nomRame}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="search-no-results">Aucune stationnée.</p>
-          )}
-        </div>
-      )}
-      
       {/* --- MODIFICATION ICI --- */}
+      {/* Le conteneur est TOUJOURS là, c'est la classe .open qui le montre */}
+      <div className={`header-search-results-container ${rechercheOuvert ? 'open' : ''}`}>
+        {/* Le CONTENU, lui, reste conditionnel pour la performance */}
+        {recherche.length > 0 && filteredStations.length === 0 && !allLineIDs.has(recherche.replace('ligne ', '').replace('m', '').trim()) ? (
+          <p className="search-no-results">Aucune station trouvée.</p>
+        ) : recherche.length === 0 ? (
+          <p className="search-prompt">Tapez un nom de station ou un n° de ligne.</p>
+        ) : (
+          filteredStations.map(station => (
+            <div key={station.nom} className="result-item"> 
+              <h4 className="result-item-titre">{station.nom}</h4>
+              <div className="result-item-lignes">
+                {station.lignes.map(id => (
+                  <Link key={id} to={`/ligne/${id}`} onClick={handleLinkClick}>
+                    <img 
+                      src={`/assets/${id}-logo.png`} 
+                      alt={`Ligne ${id}`} 
+                      className="result-item-logo"
+                      title={`Ligne ${id}`}
+                    />
+                  </Link>
+                ))}
+              </div>
+              <p className="result-item-rames-label">Rames possibles :</p>
+              <div className="result-item-rames">
+                {station.rames.map(nomRame => (
+                  <Link key={nomRame} to={`/rame/${nomRame}`} className="result-item-rame-tag" onClick={handleLinkClick}>
+                    {nomRame}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+      {/* --- FIN MODIFICATION --- */}
+
+      
       {/* Ajout de onClick={closeRecherche} pour fermer en cliquant sur le contenu */}
       <div className="page-container" onClick={closeRecherche}>
         <main className="page-content">
           <Outlet /> 
         </main>
       </div>
-      {/* --- FIN MODIFICATION --- */}
 
       <MenuDeroulant 
         estOuvert={menuOuvert} 

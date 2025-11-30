@@ -337,374 +337,2231 @@ export const ligneColors = {
 // --- STATIONS (Réseau actuel + Extensions 2024 + GPE) ---
 // (Triées par ordre alphabétique)
 export const stationsData = [
-  { nom: "Abbesses", lignes: ["12"] },
-  { nom: "Aéroport Charles-de-Gaulle 2 TGV", lignes: ["17"] },
-  { nom: "Aéroport d'Orly", lignes: ["14", "18"] },
-  { nom: "Aimé Césaire", lignes: ["12"] },
-  { nom: "Alésia", lignes: ["4"] },
-  { nom: "Alexandre Dumas", lignes: ["2"] },
-  { nom: "Alma–Marceau", lignes: ["9"] },
-  { nom: "Anatole France", lignes: ["3"] },
-  { nom: "Antonypole", lignes: ["18"] },
-  { nom: "Anvers", lignes: ["2"] },
-  { nom: "Arcueil–Cachan", lignes: ["15"] },
-  { nom: "Argentine", lignes: ["1"] },
-  { nom: "Arts et Métiers", lignes: ["3", "11"] },
-  { nom: "Asnières–Gennevilliers–Les Courtilles", lignes: ["13"] },
-  { nom: "Assemblée Nationale", lignes: ["12"] },
-  { nom: "Aubervilliers–Pantin–Quatre Chemins", lignes: ["7"] },
-  { nom: "Aulnay–Val Francilia", lignes: ["16"] },
-  { nom: "Avenue Émile-Zola", lignes: ["10"] },
-  { nom: "Avron", lignes: ["2"] },
-  { nom: "Bagneux–Lucie Aubrac", lignes: ["4", "15"] },
-  { nom: "Balard", lignes: ["8"] },
-  { nom: "Barbès–Rochechouart", lignes: ["2", "4"] },
-  { nom: "Barbara", lignes: ["4"] },
-  { nom: "Basilique de Saint-Denis", lignes: ["13"] },
-  { nom: "Bastille", lignes: ["1", "5", "8"] },
-  { nom: "Bécon-les-Bruyères", lignes: ["15"] },
-  { nom: "Bel-Air", lignes: ["6"] },
-  { nom: "Belleville", lignes: ["2", "11"] },
-  { nom: "Bercy", lignes: ["6", "14"] },
-  { nom: "Bérault", lignes: ["1"] },
-  { nom: "Bibliothèque François-Mitterrand", lignes: ["14"] },
-  { nom: "Billancourt", lignes: ["9"] },
-  { nom: "Bir-Hakeim", lignes: ["6"] },
-  { nom: "Blanche", lignes: ["2"] },
-  { nom: "Bobigny–La Folie", lignes: ["5"] },
-  { nom: "Bobigny - Pantin - Raymond Queneau", lignes: ["5"] },
-  { nom: "Bobigny–Pablo Picasso", lignes: ["5", "15"] },
-  { nom: "Bois-Colombes", lignes: ["15"] },
-  { nom: "Boissière", lignes: ["6"] },
-  { nom: "Bolivar", lignes: ["7bis"] },
-  { nom: "Bondy", lignes: ["15"] },
-  { nom: "Bonne Nouvelle", lignes: ["8", "9"] },
-  { nom: "Botzaris", lignes: ["7bis"] },
-  { nom: "Boucicaut", lignes: ["8"] },
-  { nom: "Boulogne–Jean Jaurès", lignes: ["10"] },
-  { nom: "Boulogne–Pont de Saint-Cloud", lignes: ["10"] },
-  { nom: "Bourse", lignes: ["3"] },
-  { nom: "Bréguet–Sabin", lignes: ["5"] },
-  { nom: "Brochant", lignes: ["13"] },
-  { nom: "Buttes Chaumont", lignes: ["7bis"] },
-  { nom: "Buzenval", lignes: ["9"] },
-  { nom: "Cadet", lignes: ["7"] },
-  { nom: "Cambronne", lignes: ["6"] },
-  { nom: "Campo Formio", lignes: ["5"] },
-  { nom: "Cardinal Lemoine", lignes: ["10"] },
-  { nom: "Carrefour Pleyel", lignes: ["13"] },
-  { nom: "CEA Saint-Aubin", lignes: ["18"] },
-  { nom: "Censier–Daubenton", lignes: ["7"] },
-  { nom: "Champigny Centre", lignes: ["15"] },
-  { nom: "Champs-Élysées–Clemenceau", lignes: ["1", "13"] },
-  { nom: "Chardon Lagache", lignes: ["10"] },
-  { nom: "Charenton–Écoles", lignes: ["8"] },
-  { nom: "Charles de Gaulle–Étoile", lignes: ["1", "2", "6"] },
-  { nom: "Charles Michels", lignes: ["10"] },
-  { nom: "Charonne", lignes: ["9"] },
-  { nom: "Château de Vincennes", lignes: ["1"] },
-  { nom: "Château d'Eau", lignes: ["4"] },
-  { nom: "Château de Landon", lignes: ["7"] },
-  { nom: "Château Rouge", lignes: ["4"] },
-  { nom: "Châtelet", lignes: ["1", "4", "7", "11", "14"] },
-  { nom: "Châtillon–Montrouge", lignes: ["13", "15"] },
-  { nom: "Chaussée d'Antin–La Fayette", lignes: ["7", "9"] },
-  { nom: "Chelles–Gournay", lignes: ["16"] },
-  { nom: "Chemin Vert", lignes: ["8"] },
-  { nom: "Chevaleret", lignes: ["6"] },
-  { nom: "Chevilly-Larue", lignes: ["14"] },
-  { nom: "Cité", lignes: ["4"] },
-  { nom: "Clamart", lignes: ["15"] },
-  { nom: "Clichy–Montfermeil", lignes: ["16"] },
-  { nom: "Cluny–La Sorbonne", lignes: ["10"] },
-  { nom: "Colonel Fabien", lignes: ["2"] },
-  { nom: "Commerce", lignes: ["8"] },
-  { nom: "Concorde", lignes: ["1", "8", "12"] },
-  { nom: "Convention", lignes: ["12"] },
-  { nom: "Corentin Cariou", lignes: ["7"] },
-  { nom: "Corentin Celton", lignes: ["12"] },
-  { nom: "Corvisart", lignes: ["6"] },
-  { nom: "Coteaux Beauclair", lignes: ["11"] },
-  { nom: "Courcelles", lignes: ["2"] },
-  { nom: "Couronnes", lignes: ["2"] },
-  { nom: "Cour Saint-Émilion", lignes: ["14"] },
-  { nom: "Créteil–L'Échat", lignes: ["8", "15"] },
-  { nom: "Créteil–Préfecture", lignes: ["8"] },
-  { nom: "Créteil–Université", lignes: ["8"] },
-  { nom: "Croix de Chavaux", lignes: ["9"] },
-  { nom: "Crimée", lignes: ["7"] },
-  { nom: "Danube", lignes: ["7bis"] },
-  { nom: "Daumesnil", lignes: ["6", "8"] },
-  { nom: "Denfert-Rochereau", lignes: ["4", "6"] },
-  { nom: "Drancy-Bobigny", lignes: ["15"] },
-  { nom: "Dugommier", lignes: ["6"] },
-  { nom: "Dupleix", lignes: ["6"] },
-  { nom: "Duroc", lignes: ["10", "13"] },
-  { nom: "École Militaire", lignes: ["8"] },
-  { nom: "École Vétérinaire de Maisons-Alfort", lignes: ["8"] },
-  { nom: "Edgar Quinet", lignes: ["6"] },
-  { nom: "Église d'Auteuil", lignes: ["10"] },
-  { nom: "Église de Pantin", lignes: ["5"] },
-  { nom: "Esplanade de La Défense", lignes: ["1"] },
-  { nom: "Étienne Marcel", lignes: ["4"] },
-  { nom: "Europe", lignes: ["3"] },
-  { nom: "Exelmans", lignes: ["9"] },
-  { nom: "Faidherbe–Chaligny", lignes: ["8"] },
-  { nom: "Falguière", lignes: ["12"] },
-  { nom: "Félix Faure", lignes: ["8"] },
-  { nom: "Filles du Calvaire", lignes: ["8"] },
-  { nom: "Fort d'Aubervilliers", lignes: ["7"] },
-  { nom: "Franklin D. Roosevelt", lignes: ["1", "9"] },
-  { nom: "Front Populaire", lignes: ["12"] },
-  { nom: "Gabriel Péri", lignes: ["13"] },
-  { nom: "Gaîté", lignes: ["13"] },
-  { nom: "Gallieni", lignes: ["3"] },
-  { nom: "Gambetta", lignes: ["3", "3bis"] },
-  { nom: "Gare d'Austerlitz", lignes: ["5", "10"] },
-  { nom: "Gare de l'Est", lignes: ["4", "5", "7"] },
-  { nom: "Gare de Lyon", lignes: ["1", "14"] },
-  { nom: "Gare du Nord", lignes: ["4", "5"] },
-  { nom: "Garibaldi", lignes: ["13"] },
-  { nom: "George V", lignes: ["1"] },
-  { nom: "Glacière", lignes: ["6"] },
-  { nom: "Gonesse", lignes: ["17"] },
-  { nom: "Goncourt", lignes: ["11"] },
-  { nom: "Grands Boulevards", lignes: ["8", "9"] },
-  { nom: "Guy Môquet", lignes: ["13"] },
-  { nom: "Havre–Caumartin", lignes: ["3", "9"] },
-  { nom: "Hoche", lignes: ["5"] },
-  { nom: "Hôpital Bicêtre", lignes: ["14"] },
-  { nom: "Hôtel de Ville", lignes: ["1", "11"] },
-  { nom: "Iéna", lignes: ["9"] },
-  { nom: "Invalides", lignes: ["8", "13"] },
-  { nom: "Issy (RER)", lignes: ["15"] },
-  { nom: "Jacques Bonsergent", lignes: ["5"] },
-  { nom: "Jasmin", lignes: ["9"] },
-  { nom: "Jaurès", lignes: ["2", "5", "7bis"] },
-  { nom: "Javel–André Citroën", lignes: ["10"] },
-  { nom: "Jourdain", lignes: ["11"] },
-  { nom: "Jules Joffrin", lignes: ["12"] },
-  { nom: "Jussieu", lignes: ["7", "10"] },
-  { nom: "Kléber", lignes: ["6"] },
-  { nom: "La Chapelle", lignes: ["2"] },
-  { nom: "La Courneuve–8 Mai 1945", lignes: ["7"] },
-  { nom: "La Courneuve–Six Routes", lignes: ["16", "17"] },
-  { nom: "La Défense", lignes: ["1", "15"] },
-  { nom: "La Dhuys", lignes: ["11"] },
-  { nom: "La Fourche", lignes: ["13"] },
-  { nom: "Lamarck–Caulaincourt", lignes: ["12"] },
-  { nom: "La Motte-Picquet–Grenelle", lignes: ["6", "8", "10"] },
-  { nom: "La Muette", lignes: ["9"] },
-  { nom: "La Tour-Maubourg", lignes: ["8"] },
-  { nom: "Laumière", lignes: ["5"] },
-  { nom: "Le Blanc-Mesnil", lignes: ["16"] },
-  { nom: "Le Bourget–Aéroport", lignes: ["17"] },
-  { nom: "Le Bourget–RER", lignes: ["16", "17"] },
-  { nom: "Le Kremlin-Bicêtre", lignes: ["7"] },
-  { nom: "Le Mesnil-Amelot", lignes: ["17"] },
-  { nom: "Le Peletier", lignes: ["7"] },
-  { nom: "Ledru-Rollin", lignes: ["8"] },
-  { nom: "Les Agnettes", lignes: ["13", "15"] },
-  { nom: "Les Ardoines", lignes: ["15"] },
-  { nom: "Les Courtilles", lignes: ["13"] },
-  { nom: "Les Gobelins", lignes: ["7"] },
-  { nom: "Les Grésillons", lignes: ["15"] },
-  { nom: "Les Halles", lignes: ["4"] },
-  { nom: "Les Sablons", lignes: ["1"] },
-  { nom: "Le Vert de Maisons", lignes: ["15"] },
-  { nom: "L'Haÿ-les-Roses", lignes: ["14"] },
-  { nom: "Liberté", lignes: ["8"] },
-  { nom: "Liège", lignes: ["13"] },
-  { nom: "Louis Blanc", lignes: ["7", "7bis"] },
-  { nom: "Louise Michel", lignes: ["3"] },
-  { nom: "Lourmel", lignes: ["8"] },
-  { nom: "Louvre–Rivoli", lignes: ["1"] },
-  { nom: "Mabillon", lignes: ["10"] },
-  { nom: "Madeleine", lignes: ["8", "12", "14"] },
-  { nom: "Mairie d'Aubervilliers", lignes: ["12"] },
-  { nom: "Mairie de Clichy", lignes: ["13"] },
-  { nom: "Mairie d'Issy", lignes: ["12"] },
-  { nom: "Mairie d'Ivry", lignes: ["7"] },
-  { nom: "Mairie des Lilas", lignes: ["11"] },
-  { nom: "Mairie de Montreuil", lignes: ["9"] },
-  { nom: "Mairie de Montrouge", lignes: ["4"] },
-  { nom: "Mairie de Saint-Ouen", lignes: ["13", "14"] },
-  { nom: "Mairie de Vitry-sur-Seine", lignes: ["15"] },
-  { nom: "Maison Blanche", lignes: ["7", "14"] },
-  { nom: "Maisons-Alfort–Les Juilliottes", lignes: ["8"] },
-  { nom: "Maisons-Alfort–Stade", lignes: ["8"] },
-  { nom: "Malakoff–Plateau de Vanves", lignes: ["13"] },
-  { nom: "Malakoff–Rue Étienne-Dolet", lignes: ["13"] },
-  { nom: "Malesherbes", lignes: ["3"] },
-  { nom: "Maraîchers", lignes: ["9"] },
-  { nom: "Marcadet–Poissonniers", lignes: ["4", "12"] },
-  { nom: "Marcel Sembat", lignes: ["9"] },
-  { nom: "Marx Dormoy", lignes: ["12"] },
-  { nom: "Massy–Opéra", lignes: ["18"] },
-  { nom: "Massy–Palaiseau", lignes: ["18"] },
-  { nom: "Maubert–Mutualité", lignes: ["10"] },
-  { nom: "Ménilmontant", lignes: ["2"] },
-  { nom: "Michel Bizot", lignes: ["8"] },
-  { nom: "Michel-Ange–Auteuil", lignes: ["9", "10"] },
-  { nom: "Michel-Ange–Molitor", lignes: ["9", "10"] },
-  { nom: "Mirabeau", lignes: ["10"] },
-  { nom: "Miromesnil", lignes: ["9", "13"] },
-  { nom: "Monceau", lignes: ["2"] },
-  { nom: "Montgallet", lignes: ["8"] },
-  { nom: "Montparnasse–Bienvenüe", lignes: ["4", "6", "12", "13"] },
-  { nom: "Montreuil - Hôpital", lignes: ["11"] },
-  { nom: "Mouton-Duvernet", lignes: ["4"] },
-  { nom: "Nanterre La Boule", lignes: ["15"] },
-  { nom: "Nanterre La Folie", lignes: ["15"] },
-  { nom: "Nation", lignes: ["1", "2", "6", "9"] },
-  { nom: "Nationale", lignes: ["6"] },
-  { nom: "Nogent–Le Perreux", lignes: ["15"] },
-  { nom: "Noisy–Champs", lignes: ["15", "16"] },
-  { nom: "Notre-Dame-de-Lorette", lignes: ["12"] },
-  { nom: "Notre-Dame-des-Champs", lignes: ["12"] },
-  { nom: "Oberkampf", lignes: ["5", "9"] },
-  { nom: "Odéon", lignes: ["4", "10"] },
-  { nom: "Olympiades", lignes: ["14"] },
-  { nom: "Opéra", lignes: ["3", "7", "8"] },
-  { nom: "Orsay–Gif", lignes: ["18"] },
-  { nom: "Ourcq", lignes: ["5"] },
-  { nom: "Palais Royal–Musée du Louvre", lignes: ["1", "7"] },
-  { nom: "Palaiseau", lignes: ["18"] },
-  { nom: "Parc des Expositions", lignes: ["17"] },
-  { nom: "Parmentier", lignes: ["3"] },
-  { nom: "Passy", lignes: ["6"] },
-  { nom: "Pasteur", lignes: ["6", "12"] },
-  { nom: "Pelleport", lignes: ["3bis"] },
-  { nom: "Pereire", lignes: ["3"] },
-  { nom: "Père Lachaise", lignes: ["2", "3"] },
-  { nom: "Pernety", lignes: ["13"] },
-  { nom: "Philippe Auguste", lignes: ["2"] },
-  { nom: "Picpus", lignes: ["6"] },
-  { nom: "Pierre et Marie Curie", lignes: ["7"] },
-  { nom: "Pigalle", lignes: ["2", "12"] },
-  { nom: "Place d'Italie", lignes: ["5", "6", "7"] },
-  { nom: "Place de Clichy", lignes: ["2", "13"] },
-  { nom: "Place des Fêtes", lignes: ["7bis", "11"] },
-  { nom: "Place Monge", lignes: ["7"] },
-  { nom: "Plaisance", lignes: ["13"] },
-  { nom: "Pointe du Lac", lignes: ["8"] },
-  { nom: "Poissonnière", lignes: ["7"] },
-  { nom: "Pont de Bondy", lignes: ["15"] },
-  { nom: "Pont Cardinet", lignes: ["14"] },
-  { nom: "Pont de Levallois–Bécon", lignes: ["3"] },
-  { nom: "Pont de Neuilly", lignes: ["1"] },
-  { nom: "Pont de Sèvres", lignes: ["9", "15"] },
-  { nom: "Pont Marie", lignes: ["7"] },
-  { nom: "Pont Neuf", lignes: ["7"] },
-  { nom: "Porte d'Auteuil", lignes: ["10"] },
-  { nom: "Porte d'Aubervilliers", lignes: ["12"] },
-  { nom: "Porte de Bagnolet", lignes: ["3"] },
-  { nom: "Porte de Champerret", lignes: ["3"] },
-  { nom: "Porte de Charenton", lignes: ["8"] },
-  { nom: "Porte de Choisy", lignes: ["7"] },
-  { nom: "Porte de Clichy", lignes: ["13", "14"] },
-  { nom: "Porte de Clignancourt", lignes: ["4"] },
-  { nom: "Porte Dauphine", lignes: ["2"] },
-  { nom: "Porte de Gentilly", lignes: ["14"] },
-  { nom: "Porte d'Italie", lignes: ["7"] },
-  { nom: "Porte d'Ivry", lignes: ["7"] },
-  { nom: "Porte de la Chapelle", lignes: ["12"] },
-  { nom: "Porte de la Villette", lignes: ["7"] },
-  { nom: "Porte de Montreuil", lignes: ["9"] },
-  { nom: "Porte de Pantin", lignes: ["5"] },
-  { nom: "Porte de Saint-Cloud", lignes: ["9"] },
-  { nom: "Porte de Saint-Ouen", lignes: ["13"] },
-  { nom: "Porte de Vanves", lignes: ["13"] },
-  { nom: "Porte de Versailles", lignes: ["12"] },
-  { nom: "Porte de Vincennes", lignes: ["1"] },
-  { nom: "Porte des Lilas", lignes: ["3bis", "11"] },
-  { nom: "Porte Dorée", lignes: ["8"] },
-  { nom: "Porte d'Orléans", lignes: ["4"] },
-  { nom: "Porte Maillot", lignes: ["1"] },
-  { nom: "Pré-Saint-Gervais", lignes: ["7bis"] },
-  { nom: "Pyramides", lignes: ["7", "14"] },
-  { nom: "Pyrénées", lignes: ["11"] },
-  { nom: "Quai de la Gare", lignes: ["6"] },
-  { nom: "Quai de la Rapée", lignes: ["5"] },
-  { nom: "Quatre-Septembre", lignes: ["3"] },
-  { nom: "Rambuteau", lignes: ["11"] },
-  { nom: "Ranelagh", lignes: ["9"] },
-  { nom: "Raspail", lignes: ["4", "6"] },
-  { nom: "Réaumur–Sébastopol", lignes: ["3", "4"] },
-  { nom: "Rennes", lignes: ["12"] },
-  { nom: "République", lignes: ["3", "5", "8", "9", "11"] },
-  { nom: "Reuilly–Diderot", lignes: ["1", "8"] },
-  { nom: "Richard-Lenoir", lignes: ["5"] },
-  { nom: "Richelieu–Drouot", lignes: ["8", "9"] },
-  { nom: "Riquet", lignes: ["7"] },
-  { nom: "Robespierre", lignes: ["9"] },
-  { nom: "Romainville - Carnot", lignes: ["11"] },
-  { nom: "Rome", lignes: ["2"] },
-  { nom: "Rosny–Bois-Perrier", lignes: ["11", "15"] },
-  { nom: "Rueil–Suresnes Mont-Valérien", lignes: ["15"] },
-  { nom: "Rue de la Pompe", lignes: ["9"] },
-  { nom: "Rue des Boulets", lignes: ["9"] },
-  { nom: "Rue du Bac", lignes: ["12"] },
-  { nom: "Rue Saint-Maur", lignes: ["3"] },
-  { nom: "Saint-Ambroise", lignes: ["9"] },
-  { nom: "Saint-Augustin", lignes: ["9"] },
-  { nom: "Saint-Cloud", lignes: ["15"] },
-  { nom: "Saint-Denis–Porte de Paris", lignes: ["13"] },
-  { nom: "Saint-Denis Pleyel", lignes: ["14", "15", "16", "17"] },
-  { nom: "Saint-Denis–Université", lignes: ["13"] },
-  { nom: "Saint-Fargeau", lignes: ["3bis"] },
-  { nom: "Saint-François-Xavier", lignes: ["13"] },
-  { nom: "Saint-Georges", lignes: ["12"] },
-  { nom: "Saint-Germain-des-Prés", lignes: ["4"] },
-  { nom: "Saint-Jacques", lignes: ["6"] },
-  { nom: "Saint-Lazare", lignes: ["3", "12", "13", "14"] },
-  { nom: "Saint-Mandé", lignes: ["1"] },
-  { nom: "Saint-Marcel", lignes: ["5"] },
-  { nom: "Saint-Maur–Créteil", lignes: ["15"] },
-  { nom: "Saint-Michel", lignes: ["4"] },
-  { nom: "Saint-Ouen", lignes: ["14"] },
-  { nom: "Saint-Paul", lignes: ["1"] },
-  { nom: "Saint-Philippe du Roule", lignes: ["9"] },
-  { nom: "Saint-Placide", lignes: ["4"] },
-  { nom: "Saint-Quentin Est", lignes: ["18"] },
-  { nom: "Saint-Sébastien–Froissart", lignes: ["8"] },
-  { nom: "Saint-Sulpice", lignes: ["4"] },
-  { nom: "Satory", lignes: ["18"] },
-  { nom: "Ségur", lignes: ["10"] },
-  { nom: "Sentier", lignes: ["3"] },
-  { nom: "Serge Gainsbourg", lignes: ["11"] },
-  { nom: "Sevran–Beaudottes", lignes: ["16"] },
-  { nom: "Sevran–Livry", lignes: ["16"] },
-  { nom: "Sèvres–Babylone", lignes: ["10", "12"] },
-  { nom: "Sèvres–Lecourbe", lignes: ["6"] },
-  { nom: "Simplon", lignes: ["4"] },
-  { nom: "Solférino", lignes: ["12"] },
-  { nom: "Stade de France", lignes: ["15"] },
-  { nom: "Stalingrad", lignes: ["2", "5", "7"] },
-  { nom: "Strasbourg–Saint-Denis", lignes: ["4", "8", "9"] },
-  { nom: "Sully–Morland", lignes: ["7"] },
-  { nom: "Télégraphe", lignes: ["11"] },
-  { nom: "Temple", lignes: ["3"] },
-  { nom: "Ternes", lignes: ["2"] },
-  { nom: "Thiais - Orly", lignes: ["14"] },
-  { nom: "Tolbiac", lignes: ["7"] },
-  { nom: "Trinité–d'Estienne d'Orves", lignes: ["12"] },
-  { nom: "Trocadéro", lignes: ["6", "9"] },
-  { nom: "Tuileries", lignes: ["1"] },
-  { nom: "Vaneau", lignes: ["10"] },
-  { nom: "Varenne", lignes: ["13"] },
-  { nom: "Vaugirard", lignes: ["12"] },
-  { nom: "Vavin", lignes: ["4"] },
-  { nom: "Verdun-Sud", lignes: ["4"] },
-  { nom: "Versailles Chantiers", lignes: ["18"] },
-  { nom: "Victor Hugo", lignes: ["2"] },
-  { nom: "Villejuif - Gustave Roussy", lignes: ["14", "15"] },
-  { nom: "Villejuif - Léo Lagrange", lignes: ["7"] },
-  { nom: "Villejuif–Louis Aragon", lignes: ["7", "15"] },
-  { nom: "Villejuif–Paul Vaillant-Couturier", lignes: ["7"] },
-  { nom: "Villiers", lignes: ["2", "3"] },
-  { nom: "Villiers–Champigny–Bry", lignes: ["15"] },
-  { nom: "Volontaires", lignes: ["12"] },
-  { nom: "Voltaire", lignes: ["9"] },
-  { nom: "Wagram", lignes: ["3"] }
+  {
+    nom: "Abbesses",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Aéroport Charles-de-Gaulle 2 TGV",
+    lignes: ["17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Aéroport d'Orly",
+    lignes: ["14", "18"],
+    resume: "",
+    materiel: ["MP 14 CA", "MRV"]
+  },
+  {
+    nom: "Aimé Césaire",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Alésia",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Alexandre Dumas",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Alma–Marceau",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Anatole France",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Antonypole",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Anvers",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Arcueil–Cachan",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Argentine",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Arts et Métiers",
+    lignes: ["3", "11"],
+    resume: "",
+    materiel: ["MF 67", "MP 14 CC"]
+  },
+  {
+    nom: "Asnières–Gennevilliers–Les Courtilles",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Assemblée Nationale",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Aubervilliers–Pantin–Quatre Chemins",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Aulnay–Val Francilia",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Avenue Émile-Zola",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Avron",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Bagneux–Lucie Aubrac",
+    lignes: ["4", "15"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MR6V"]
+  },
+  {
+    nom: "Balard",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Barbès–Rochechouart",
+    lignes: ["2", "4"],
+    resume: "",
+    materiel: ["MF 01", "MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Barbara",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Basilique de Saint-Denis",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Bastille",
+    lignes: ["1", "5", "8"],
+    resume: "",
+    materiel: ["MP 05", "MF 01", "MF 77"]
+  },
+  {
+    nom: "Bécon-les-Bruyères",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Bel-Air",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Belleville",
+    lignes: ["2", "11"],
+    resume: "",
+    materiel: ["MF 01", "MP 14 CC"]
+  },
+  {
+    nom: "Bercy",
+    lignes: ["6", "14"],
+    resume: "",
+    materiel: ["MP 73", "MP 14 CA"]
+  },
+  {
+    nom: "Bérault",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Bibliothèque François-Mitterrand",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Billancourt",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Bir-Hakeim",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Blanche",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Bobigny–La Folie",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Bobigny - Pantin - Raymond Queneau",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Bobigny–Pablo Picasso",
+    lignes: ["5", "15"],
+    resume: "",
+    materiel: ["MF 01", "MR6V"]
+  },
+  {
+    nom: "Bois-Colombes",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Boissière",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Bolivar",
+    lignes: ["7bis"],
+    resume: "",
+    materiel: ["MF 88"]
+  },
+  {
+    nom: "Bondy",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Bonne Nouvelle",
+    lignes: ["8", "9"],
+    resume: "",
+    materiel: ["MF 77", "MF 01"]
+  },
+  {
+    nom: "Botzaris",
+    lignes: ["7bis"],
+    resume: "",
+    materiel: ["MF 88"]
+  },
+  {
+    nom: "Boucicaut",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Boulogne–Jean Jaurès",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Boulogne–Pont de Saint-Cloud",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Bourse",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Bréguet–Sabin",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Brochant",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Buttes Chaumont",
+    lignes: ["7bis"],
+    resume: "",
+    materiel: ["MF 88"]
+  },
+  {
+    nom: "Buzenval",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Cadet",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Cambronne",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Campo Formio",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Cardinal Lemoine",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Carrefour Pleyel",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "CEA Saint-Aubin",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Censier–Daubenton",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Champigny Centre",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Champs-Élysées–Clemenceau",
+    lignes: ["1", "13"],
+    resume: "",
+    materiel: ["MP 05", "MF 77"]
+  },
+  {
+    nom: "Chardon Lagache",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Charenton–Écoles",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Charles de Gaulle–Étoile",
+    lignes: ["1", "2", "6"],
+    resume: "",
+    materiel: ["MP 05", "MF 01", "MP 73"]
+  },
+  {
+    nom: "Charles Michels",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Charonne",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Château de Vincennes",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Château d'Eau",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Château de Landon",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Château Rouge",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Châtelet",
+    lignes: ["1", "4", "7", "11", "14"],
+    resume: "",
+    materiel: [
+      "MP 05",
+      "MP 14 CA",
+      "MP 05 IDFM",
+      "MP 89 CA",
+      "MF 77",
+      "MP 14 CC"
+    ]
+  },
+  {
+    nom: "Châtillon–Montrouge",
+    lignes: ["13", "15"],
+    resume: "",
+    materiel: ["MF 77", "MR6V"]
+  },
+  {
+    nom: "Chaussée d'Antin–La Fayette",
+    lignes: ["7", "9"],
+    resume: "",
+    materiel: ["MF 77", "MF 01"]
+  },
+  {
+    nom: "Chelles–Gournay",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Chemin Vert",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Chevaleret",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Chevilly-Larue",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Cité",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Clamart",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Clichy–Montfermeil",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Cluny–La Sorbonne",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Colonel Fabien",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Commerce",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Concorde",
+    lignes: ["1", "8", "12"],
+    resume: "",
+    materiel: ["MP 05", "MF 77", "MF 67"]
+  },
+  {
+    nom: "Convention",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Corentin Cariou",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Corentin Celton",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Corvisart",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Coteaux Beauclair",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Courcelles",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Couronnes",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Cour Saint-Émilion",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Créteil–L'Échat",
+    lignes: ["8", "15"],
+    resume: "",
+    materiel: ["MF 77", "MR6V"]
+  },
+  {
+    nom: "Créteil–Préfecture",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Créteil–Université",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Croix de Chavaux",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Crimée",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Danube",
+    lignes: ["7bis"],
+    resume: "",
+    materiel: ["MF 88"]
+  },
+  {
+    nom: "Daumesnil",
+    lignes: ["6", "8"],
+    resume: "",
+    materiel: ["MP 73", "MF 77"]
+  },
+  {
+    nom: "Denfert-Rochereau",
+    lignes: ["4", "6"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73"]
+  },
+  {
+    nom: "Drancy-Bobigny",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Dugommier",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Dupleix",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Duroc",
+    lignes: ["10", "13"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC", "MF 77"]
+  },
+  {
+    nom: "École Militaire",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "École Vétérinaire de Maisons-Alfort",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Edgar Quinet",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Église d'Auteuil",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Église de Pantin",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Esplanade de La Défense",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Étienne Marcel",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Europe",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Exelmans",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Faidherbe–Chaligny",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Falguière",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Félix Faure",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Filles du Calvaire",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Fort d'Aubervilliers",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Franklin D. Roosevelt",
+    lignes: ["1", "9"],
+    resume: "",
+    materiel: ["MP 05", "MF 01"]
+  },
+  {
+    nom: "Front Populaire",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Gabriel Péri",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Gaîté",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Gallieni",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Gambetta",
+    lignes: ["3", "3bis"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Gare d'Austerlitz",
+    lignes: ["5", "10"],
+    resume: "",
+    materiel: ["MF 01", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Gare de l'Est",
+    lignes: ["4", "5", "7"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MF 01", "MF 77"]
+  },
+  {
+    nom: "Gare de Lyon",
+    lignes: ["1", "14"],
+    resume: "",
+    materiel: ["MP 05", "MP 14 CA"]
+  },
+  {
+    nom: "Gare du Nord",
+    lignes: ["4", "5"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MF 01"]
+  },
+  {
+    nom: "Garibaldi",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "George V",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Glacière",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Gonesse",
+    lignes: ["17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Goncourt",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Grands Boulevards",
+    lignes: ["8", "9"],
+    resume: "",
+    materiel: ["MF 77", "MF 01"]
+  },
+  {
+    nom: "Guy Môquet",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Havre–Caumartin",
+    lignes: ["3", "9"],
+    resume: "",
+    materiel: ["MF 67", "MF 01"]
+  },
+  {
+    nom: "Hoche",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Hôpital Bicêtre",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Hôtel de Ville",
+    lignes: ["1", "11"],
+    resume: "",
+    materiel: ["MP 05", "MP 14 CC"]
+  },
+  {
+    nom: "Iéna",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Invalides",
+    lignes: ["8", "13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Issy (RER)",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Jacques Bonsergent",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Jasmin",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Jaurès",
+    lignes: ["2", "5", "7bis"],
+    resume: "",
+    materiel: ["MF 01", "MF 88"]
+  },
+  {
+    nom: "Javel–André Citroën",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Jourdain",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Jules Joffrin",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Jussieu",
+    lignes: ["7", "10"],
+    resume: "",
+    materiel: ["MF 77", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Kléber",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "La Chapelle",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "La Courneuve–8 Mai 1945",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "La Courneuve–Six Routes",
+    lignes: ["16", "17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "La Défense",
+    lignes: ["1", "15"],
+    resume: "",
+    materiel: ["MP 05", "MR6V"]
+  },
+  {
+    nom: "La Dhuys",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "La Fourche",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Lamarck–Caulaincourt",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "La Motte-Picquet–Grenelle",
+    lignes: ["6", "8", "10"],
+    resume: "",
+    materiel: ["MP 73", "MF 77", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "La Muette",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "La Tour-Maubourg",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Laumière",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Le Blanc-Mesnil",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Le Bourget–Aéroport",
+    lignes: ["17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Le Bourget–RER",
+    lignes: ["16", "17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Le Kremlin-Bicêtre",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Le Mesnil-Amelot",
+    lignes: ["17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Le Peletier",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Ledru-Rollin",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Les Agnettes",
+    lignes: ["13", "15"],
+    resume: "",
+    materiel: ["MF 77", "MR6V"]
+  },
+  {
+    nom: "Les Ardoines",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Les Courtilles",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Les Gobelins",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Les Grésillons",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Les Halles",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Les Sablons",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Le Vert de Maisons",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "L'Haÿ-les-Roses",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Liberté",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Liège",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Louis Blanc",
+    lignes: ["7", "7bis"],
+    resume: "",
+    materiel: ["MF 77", "MF 88"]
+  },
+  {
+    nom: "Louise Michel",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Lourmel",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Louvre–Rivoli",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Mabillon",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Madeleine",
+    lignes: ["8", "12", "14"],
+    resume: "",
+    materiel: ["MF 77", "MF 67", "MP 14 CA"]
+  },
+  {
+    nom: "Mairie d'Aubervilliers",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Mairie de Clichy",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Mairie d'Issy",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Mairie d'Ivry",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Mairie des Lilas",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Mairie de Montreuil",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Mairie de Montrouge",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Mairie de Saint-Ouen",
+    lignes: ["13", "14"],
+    resume: "",
+    materiel: ["MF 77", "MP 14 CA"]
+  },
+  {
+    nom: "Mairie de Vitry-sur-Seine",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Maison Blanche",
+    lignes: ["7", "14"],
+    resume: "",
+    materiel: ["MF 77", "MP 14 CA"]
+  },
+  {
+    nom: "Maisons-Alfort–Les Juilliottes",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Maisons-Alfort–Stade",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Malakoff–Plateau de Vanves",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Malakoff–Rue Étienne-Dolet",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Malesherbes",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Maraîchers",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Marcadet–Poissonniers",
+    lignes: ["4", "12"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MF 67"]
+  },
+  {
+    nom: "Marcel Sembat",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Marx Dormoy",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Massy–Opéra",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Massy–Palaiseau",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Maubert–Mutualité",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Ménilmontant",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Michel Bizot",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Michel-Ange–Auteuil",
+    lignes: ["9", "10"],
+    resume: "",
+    materiel: ["MF 01", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Michel-Ange–Molitor",
+    lignes: ["9", "10"],
+    resume: "",
+    materiel: ["MF 01", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Mirabeau",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Miromesnil",
+    lignes: ["9", "13"],
+    resume: "",
+    materiel: ["MF 01", "MF 77"]
+  },
+  {
+    nom: "Monceau",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Montgallet",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Montparnasse–Bienvenüe",
+    lignes: ["4", "6", "12", "13"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73", "MF 67", "MF 77"]
+  },
+  {
+    nom: "Montreuil - Hôpital",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Mouton-Duvernet",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Nanterre La Boule",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Nanterre La Folie",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Nation",
+    lignes: ["1", "2", "6", "9"],
+    resume: "",
+    materiel: ["MP 05", "MF 01", "MP 73"]
+  },
+  {
+    nom: "Nationale",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Nogent–Le Perreux",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Noisy–Champs",
+    lignes: ["15", "16"],
+    resume: "",
+    materiel: ["MR6V", "MR3V"]
+  },
+  {
+    nom: "Notre-Dame-de-Lorette",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Notre-Dame-des-Champs",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Oberkampf",
+    lignes: ["5", "9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Odéon",
+    lignes: ["4", "10"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Olympiades",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Opéra",
+    lignes: ["3", "7", "8"],
+    resume: "",
+    materiel: ["MF 67", "MF 77"]
+  },
+  {
+    nom: "Orsay–Gif",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Ourcq",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Palais Royal–Musée du Louvre",
+    lignes: ["1", "7"],
+    resume: "",
+    materiel: ["MP 05", "MF 77"]
+  },
+  {
+    nom: "Palaiseau",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Parc des Expositions",
+    lignes: ["17"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Parmentier",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Passy",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Pasteur",
+    lignes: ["6", "12"],
+    resume: "",
+    materiel: ["MP 73", "MF 67"]
+  },
+  {
+    nom: "Pelleport",
+    lignes: ["3bis"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Pereire",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Père Lachaise",
+    lignes: ["2", "3"],
+    resume: "",
+    materiel: ["MF 01", "MF 67"]
+  },
+  {
+    nom: "Pernety",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Philippe Auguste",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Picpus",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Pierre et Marie Curie",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Pigalle",
+    lignes: ["2", "12"],
+    resume: "",
+    materiel: ["MF 01", "MF 67"]
+  },
+  {
+    nom: "Place d'Italie",
+    lignes: ["5", "6", "7"],
+    resume: "",
+    materiel: ["MF 01", "MP 73", "MF 77"]
+  },
+  {
+    nom: "Place de Clichy",
+    lignes: ["2", "13"],
+    resume: "",
+    materiel: ["MF 01", "MF 77"]
+  },
+  {
+    nom: "Place des Fêtes",
+    lignes: ["7bis", "11"],
+    resume: "",
+    materiel: ["MF 88", "MP 14 CC"]
+  },
+  {
+    nom: "Place Monge",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Plaisance",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Pointe du Lac",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Poissonnière",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Pont de Bondy",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Pont Cardinet",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Pont de Levallois–Bécon",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Pont de Neuilly",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Pont de Sèvres",
+    lignes: ["9", "15"],
+    resume: "",
+    materiel: ["MF 01", "MR6V"]
+  },
+  {
+    nom: "Pont Marie",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Pont Neuf",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte d'Auteuil",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Porte d'Aubervilliers",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Porte de Bagnolet",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Porte de Champerret",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Porte de Charenton",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de Choisy",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de Clichy",
+    lignes: ["13", "14"],
+    resume: "",
+    materiel: ["MF 77", "MP 14 CA"]
+  },
+  {
+    nom: "Porte de Clignancourt",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Porte Dauphine",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Porte de Gentilly",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Porte d'Italie",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte d'Ivry",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de la Chapelle",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Porte de la Villette",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de Montreuil",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Porte de Pantin",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Porte de Saint-Cloud",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Porte de Saint-Ouen",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de Vanves",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte de Versailles",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Porte de Vincennes",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Porte des Lilas",
+    lignes: ["3bis", "11"],
+    resume: "",
+    materiel: ["MF 67", "MP 14 CC"]
+  },
+  {
+    nom: "Porte Dorée",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Porte d'Orléans",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Porte Maillot",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Pré-Saint-Gervais",
+    lignes: ["7bis"],
+    resume: "",
+    materiel: ["MF 88"]
+  },
+  {
+    nom: "Pyramides",
+    lignes: ["7", "14"],
+    resume: "",
+    materiel: ["MF 77", "MP 14 CA"]
+  },
+  {
+    nom: "Pyrénées",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Quai de la Gare",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Quai de la Rapée",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Quatre-Septembre",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Rambuteau",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Ranelagh",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Raspail",
+    lignes: ["4", "6"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73"]
+  },
+  {
+    nom: "Réaumur–Sébastopol",
+    lignes: ["3", "4"],
+    resume: "",
+    materiel: ["MF 67", "MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Rennes",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "République",
+    lignes: ["3", "5", "8", "9", "11"],
+    resume: "",
+    materiel: ["MF 67", "MF 01", "MF 77", "MP 14 CC"]
+  },
+  {
+    nom: "Reuilly–Diderot",
+    lignes: ["1", "8"],
+    resume: "",
+    materiel: ["MP 05", "MF 77"]
+  },
+  {
+    nom: "Richard-Lenoir",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Richelieu–Drouot",
+    lignes: ["8", "9"],
+    resume: "",
+    materiel: ["MF 77", "MF 01"]
+  },
+  {
+    nom: "Riquet",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Robespierre",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Romainville - Carnot",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Rome",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Rosny–Bois-Perrier",
+    lignes: ["11", "15"],
+    resume: "",
+    materiel: ["MP 14 CC", "MR6V"]
+  },
+  {
+    nom: "Rueil–Suresnes Mont-Valérien",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Rue de la Pompe",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Rue des Boulets",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Rue du Bac",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Rue Saint-Maur",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Saint-Ambroise",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Saint-Augustin",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Saint-Cloud",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Saint-Denis–Porte de Paris",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Saint-Denis Pleyel",
+    lignes: ["14", "15", "16", "17"],
+    resume: "",
+    materiel: ["MP 14 CA", "MR6V", "MR3V"]
+  },
+  {
+    nom: "Saint-Denis–Université",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Saint-Fargeau",
+    lignes: ["3bis"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Saint-François-Xavier",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Saint-Georges",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Saint-Germain-des-Prés",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Saint-Jacques",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Saint-Lazare",
+    lignes: ["3", "12", "13", "14"],
+    resume: "",
+    materiel: ["MF 67", "MF 77", "MP 14 CA"]
+  },
+  {
+    nom: "Saint-Mandé",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Saint-Marcel",
+    lignes: ["5"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Saint-Maur–Créteil",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Saint-Michel",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Saint-Ouen",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Saint-Paul",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Saint-Philippe du Roule",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Saint-Placide",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Saint-Quentin Est",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Saint-Sébastien–Froissart",
+    lignes: ["8"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Saint-Sulpice",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Satory",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Ségur",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Sentier",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Serge Gainsbourg",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Sevran–Beaudottes",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Sevran–Livry",
+    lignes: ["16"],
+    resume: "",
+    materiel: ["MR3V"]
+  },
+  {
+    nom: "Sèvres–Babylone",
+    lignes: ["10", "12"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Sèvres–Lecourbe",
+    lignes: ["6"],
+    resume: "",
+    materiel: ["MP 73"]
+  },
+  {
+    nom: "Simplon",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Solférino",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Stade de France",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Stalingrad",
+    lignes: ["2", "5", "7"],
+    resume: "",
+    materiel: ["MF 01", "MF 77"]
+  },
+  {
+    nom: "Strasbourg–Saint-Denis",
+    lignes: ["4", "8", "9"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MF 77", "MF 01"]
+  },
+  {
+    nom: "Sully–Morland",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Télégraphe",
+    lignes: ["11"],
+    resume: "",
+    materiel: ["MP 14 CC"]
+  },
+  {
+    nom: "Temple",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Ternes",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Thiais - Orly",
+    lignes: ["14"],
+    resume: "",
+    materiel: ["MP 14 CA"]
+  },
+  {
+    nom: "Tolbiac",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Trinité–d'Estienne d'Orves",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Trocadéro",
+    lignes: ["6", "9"],
+    resume: "",
+    materiel: ["MP 73", "MF 01"]
+  },
+  {
+    nom: "Tuileries",
+    lignes: ["1"],
+    resume: "",
+    materiel: ["MP 05"]
+  },
+  {
+    nom: "Vaneau",
+    lignes: ["10"],
+    resume: "",
+    materiel: ["MF 67", "MF 19 CC"]
+  },
+  {
+    nom: "Varenne",
+    lignes: ["13"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Vaugirard",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Vavin",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Verdun-Sud",
+    lignes: ["4"],
+    resume: "",
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA"]
+  },
+  {
+    nom: "Versailles Chantiers",
+    lignes: ["18"],
+    resume: "",
+    materiel: ["MRV"]
+  },
+  {
+    nom: "Victor Hugo",
+    lignes: ["2"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Villejuif - Gustave Roussy",
+    lignes: ["14", "15"],
+    resume: "",
+    materiel: ["MP 14 CA", "MR6V"]
+  },
+  {
+    nom: "Villejuif - Léo Lagrange",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Villejuif–Louis Aragon",
+    lignes: ["7", "15"],
+    resume: "",
+    materiel: ["MF 77", "MR6V"]
+  },
+  {
+    nom: "Villejuif–Paul Vaillant-Couturier",
+    lignes: ["7"],
+    resume: "",
+    materiel: ["MF 77"]
+  },
+  {
+    nom: "Villiers",
+    lignes: ["2", "3"],
+    resume: "",
+    materiel: ["MF 01", "MF 67"]
+  },
+  {
+    nom: "Villiers–Champigny–Bry",
+    lignes: ["15"],
+    resume: "",
+    materiel: ["MR6V"]
+  },
+  {
+    nom: "Volontaires",
+    lignes: ["12"],
+    resume: "",
+    materiel: ["MF 67"]
+  },
+  {
+    nom: "Voltaire",
+    lignes: ["9"],
+    resume: "",
+    materiel: ["MF 01"]
+  },
+  {
+    nom: "Wagram",
+    lignes: ["3"],
+    resume: "",
+    materiel: ["MF 67"]
+  }
 ];

@@ -146,11 +146,8 @@
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
-
-/* --- MODIFICATION ICI --- */
 .header-search-input.open:focus {
   outline: none;
-  /* border-color: #007bff; (Supprimé pour enlever la ligne bleue) */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* On garde l'ombre plus forte */
 }
 
@@ -207,10 +204,28 @@
   max-height: 70vh; /* Limite la hauteur */
   overflow-y: auto;
   
+  /* --- MODIFICATION ICI : État initial pour l'animation --- */
+  opacity: 0;
+  transform: translateY(-10px); /* Glisse d'en haut */
+  clip-path: inset(0 100% 0 0); /* Se révèle depuis la droite */
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, 
+              transform 0.3s ease-out, 
+              clip-path 0.3s ease-out;
+  
   /* Styles de scrollbar */
   scrollbar-width: thin;
   scrollbar-color: #ccc #f7f7f7;
 }
+
+/* --- MODIFICATION ICI : État ouvert pour l'animation --- */
+.header-search-results-container.open {
+  opacity: 1;
+  transform: translateY(0);
+  clip-path: inset(0 0 0 0); /* Révèle entièrement */
+  pointer-events: auto;
+}
+
 .header-search-results-container::-webkit-scrollbar { width: 8px; }
 .header-search-results-container::-webkit-scrollbar-track { background: #f7f7f7; }
 .header-search-results-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }

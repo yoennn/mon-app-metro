@@ -1,4 +1,5 @@
 /* src/MenuDeroulant.css */
+
 .menu-deroulant {
   position: fixed;
   top: 0;
@@ -6,20 +7,20 @@
   height: 100vh;
   width: 400px; 
   max-width: 90%;
-  background-color: #fdfdfd;
-  border-left: 1px solid #e0e0e0;
-  box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+  
+  /* --- MODIFICATIONS --- */
+  background-color: #f8f9fa; /* Fond gris clair (idem que le body) */
+  border-left: 1px solid #e0e0e0; /* Ligne de séparation subtile */
+  box-shadow: -5px 0 20px rgba(0,0,0,0.07); /* Ombre douce */
+  
   z-index: 1000;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   
-  /* --- CORRECTION ANTI-CLIC --- */
-  /* Empêche les clics si le menu est caché */
   pointer-events: none;
 }
 .menu-deroulant.open {
   transform: translateX(0);
-  /* Permet les clics si le menu est ouvert */
   pointer-events: auto; 
 }
 .menu-content {
@@ -29,45 +30,48 @@
   box-sizing: border-box;
   overflow-y: auto; 
   
-  /* Cache la scrollbar (Firefox/IE/Edge) */
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* Cache la scrollbar pour WebKit */
 .menu-content::-webkit-scrollbar {
     display: none;
 }
 
-/* STYLE POUR LES TITRES */
+/* --- MODIFICATIONS : STYLE TITRES DE SECTION --- */
 .menu-titre-section {
-  color: #444;
-  font-weight: 600;
-  font-size: 1.2rem;
-  border-bottom: 1px solid #eeeeee;
+  color: #212529; /* Texte noir */
+  font-weight: 600; /* Plus gras */
+  font-size: 1.2rem; /* Plus grand */
+  border-bottom: 1px solid #e0e0e0; /* Ligne de séparation */
   padding-bottom: 8px;
   margin-top: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .menu-content .menu-titre-section:first-child {
   margin-top: 0;
 }
 
-/* STYLE RECTANGLE POUR LIENS RÉPERTOIRE/CARTE */
+/* --- MODIFICATIONS : STYLE "CARTE" POUR LES LIENS --- */
 .menu-link-repertoire {
   display: block;
   font-size: 1.1rem;
-  font-weight: 600; 
-  color: #333; 
+  font-weight: 600; /* Gras */
+  color: #212529; 
   text-decoration: none;
-  padding: 12px;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-  margin-bottom: 8px;
-  background-color: #f0f0f0; 
+  padding: 16px;
+  border-radius: 16px; /* Arrondi de vos cartes */
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 12px;
+  
+  /* Style de carte */
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 .menu-link-repertoire:hover {
-  background-color: #e0e0e0; 
   text-decoration: none;
+  /* Effet "hover" de vos cartes */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
 
@@ -75,29 +79,37 @@
 .menu-grille {
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
-  gap: 10px;
+  gap: 12px; /* Un peu plus d'espace */
 }
 
-/* STYLE RECTANGLE POUR LES LIGNES */
+/* --- MODIFICATIONS : STYLE "CARTE" POUR LES ITEMS DE GRILLE --- */
 .menu-item {
   display: flex;
   flex-direction: column; 
   align-items: center;
+  justify-content: center; /* Centré */
   gap: 8px; 
-  padding: 10px 5px; 
+  padding: 12px 5px; 
   text-decoration: none;
   color: #333;
-  border-radius: 8px;
-  transition: background-color 0.2s;
-  background-color: #f0f0f0; 
+  border-radius: 16px; /* Arrondi de vos cartes */
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  /* Style de carte */
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  
+  height: 90px; /* Hauteur fixe pour un bel alignement */
 }
 .menu-item:hover {
-  background-color: #e0e0e0; 
+  /* Effet "hover" de vos cartes */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
 .menu-item-logo {
-  height: 45px;
-  width: 45px;
+  height: 40px; /* Ajusté */
+  width: 40px;
   object-fit: contain; 
 }
 .menu-item span {
@@ -115,5 +127,3 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* --- TOUS LES STYLES DE RECHERCHE ONT ÉTÉ SUPPRIMÉS --- */
