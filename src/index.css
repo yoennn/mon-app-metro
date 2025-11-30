@@ -5,6 +5,10 @@ html {
   
   /* Définit la taille de base sur PC (100% = 16px) */
   font-size: 100%; 
+  
+  /* --- AJOUT ICI --- */
+  /* Supprime le carré bleu/orange au clic sur mobile (Android/Chrome) */
+  -webkit-tap-highlight-color: transparent;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -36,11 +40,27 @@ body {
   }
 }
 
-/* --- MODIFICATION ICI : Réglage de la police mobile --- */
+/* --- Réglage de la police mobile --- */
 @media (max-width: 768px) {
   html {
     /* 15px / 16px = 0.9375 */
     /* Cela va réduire la taille de tous les textes en 'rem' de 6.25% sur mobile */
     font-size: 93.75%; 
+  }
+  
+  /* --- AJOUT BONUS (de la dernière fois) --- */
+  .search-prompt,
+  .search-no-results {
+    font-size: 1rem; /* Réduit de 1.1rem à 1rem */
+    padding: 20px;
+  }
+  .result-item-titre {
+    font-size: 1.1rem; /* Réduit de 1.2rem à 1.1rem */
+  }
+  .result-item-rames-label {
+    font-size: 0.75rem; /* Réduit de 0.8rem à 0.75rem */
+  }
+  .result-item-rame-tag {
+    font-size: 0.85rem; /* Réduit de 0.9rem à 0.85rem */
   }
 }
