@@ -1,0 +1,197 @@
+/* src/PageDetailStation.css */
+
+.station-detail-container {
+  width: 100%;
+  animation: fadeInUp 0.4s ease-out; /* Animation d'apparition */
+}
+
+/* --- HEADER (Titre + barre de couleur) --- */
+.station-detail-header {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+.station-detail-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Barre de couleur (style copié de PageRepertoire) */
+.station-couleur-barre {
+  display: flex;
+  height: 8px; /* Un peu plus épais pour un titre */
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 16px; 
+  width: 100%;
+}
+.couleur-segment {
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* --- LAYOUT 2 COLONNES (style PageDetailRame) --- */
+.station-detail-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- COLONNE INFOBOX (gauche) --- */
+.station-detail-infobox {
+  width: 300px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 120px; 
+}
+.infobox-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.infobox-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #212529;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Liste des logos de ligne */
+.station-lignes-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ligne-logo-station {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ligne-logo-station:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- COLONNE CONTENU (droite) --- */
+.station-detail-main {
+  flex-grow: 1;
+}
+
+/* Titres de section H2 */
+.station-detail-main h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  color: #212529;
+}
+
+/* --- NOUVELLE SECTION : Description de la station --- */
+.station-detail-description {
+  margin-bottom: 24px; /* Espace avant la grille des rames */
+}
+.station-detail-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #343a40;
+  margin: 0;
+}
+
+
+/* --- MODIFICATION : Grille des rames (3 colonnes) --- */
+.station-rames-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur bureau */
+  gap: 16px;
+}
+
+.rame-mini-carte {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 12px; /* Padding "moyen" */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.rame-mini-carte:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.rame-mini-carte-img-wrapper {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 8px; /* Padding "moyen" */
+  box-sizing: border-box;
+  margin-bottom: 10px; 
+}
+.rame-mini-carte img {
+  width: 100%;
+  height: auto;
+}
+
+.rame-mini-carte h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem; /* Taille "moyenne" */
+  font-weight: 700;
+  color: #212529;
+}
+.rame-mini-carte p {
+  margin: 0;
+  font-size: 0.85rem; /* Taille "moyenne" */
+  color: #6c757d;
+  flex-grow: 1;
+}
+/* --- FIN MODIFICATION --- */
+
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .station-detail-header h1 {
+    font-size: 2.2rem;
+  }
+  .station-detail-content {
+    flex-direction: column;
+  }
+  .station-detail-infobox {
+    width: 100%;
+    position: static;
+  }
+  
+  /* --- MODIFICATION : 2 colonnes sur mobile --- */
+  .station-rames-grille {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .rame-mini-carte {
+    padding: 8px; /* Padding réduit */
+  }
+  .rame-mini-carte-img-wrapper {
+    padding: 6px; /* Padding réduit */
+    margin-bottom: 8px; 
+  }
+  .rame-mini-carte h4 {
+    font-size: 1rem; /* Taille réduite */
+  }
+  .rame-mini-carte p {
+    font-size: 0.8rem; /* Taille réduite */
+  }
+  /* --- FIN MODIFICATION --- */
+}
+
+.header-search-results-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Retour à une seule colonne */
+  gap: 12px;
+}

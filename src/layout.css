@@ -178,20 +178,20 @@
   cursor: pointer;
 }
 
-/* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE --- */
+/* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE (RETOUR À LA LISTE) --- */
 .header-search-results-container {
   position: absolute; 
   top: 83px; 
   right: 152px; 
   width: 450px; 
   
-  background-color: #ffffff;
+  background-color: #ffffff; /* Fond blanc */
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 16px; 
-  overflow: hidden; 
+  overflow: hidden; /* Rétabli */
   
-  z-index: 950; /* Au-dessus du contenu, mais sous le logo (qui n'est plus à 950) */
+  z-index: 950;
   
   max-height: 70vh; 
   overflow-y: auto;
@@ -201,7 +201,7 @@
   transform: translateY(-10px); 
 
   /* --- CORRECTION ANIMATION --- */
-  clip-path: inset(0 0 0 100%); /* S'ouvre de droite à gauche */
+  clip-path: inset(0 0 0 100%); 
   
   pointer-events: none;
   transition: opacity 0.2s ease-out, 
@@ -225,14 +225,12 @@
 .header-search-results-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
 
 /* Styles pour les résultats (prompt, aucun résultat, items) */
-
-/* --- CORRECTION ALIGNEMENT TEXTE --- */
 .search-prompt,
 .search-no-results {
   padding: 24px;
   color: #6c757d;
-  text-align: left;    /* MODIFIÉ: center -> left */
-  padding-left: 28px;  /* AJOUTÉ: pour aligner avec le texte des résultats */
+  text-align: left;
+  padding-left: 28px;
   font-size: 1.1rem;
 }
 
@@ -240,7 +238,29 @@
 .result-item:first-child { padding-top: 16px; }
 .result-item:last-child { border-bottom: none; padding-bottom: 16px; }
 
-.result-item-titre { font-size: 1.2rem; font-weight: 700; margin: 0 0 8px 0; }
+/* --- MODIFICATION : CORRECTION DU HOVER --- */
+.result-item-titre-link {
+  text-decoration: none;
+  color: inherit;
+}
+.result-item-titre-link:hover .result-item-titre {
+  background-color: #f0f0f0; /* Le fond gris est appliqué au H4 */
+}
+.result-item-titre { 
+  font-size: 1.2rem; 
+  font-weight: 700; 
+  margin: 0 0 8px 0; /* Marge en bas du H4 */
+  
+  /* Style du rectangle */
+  display: inline-block; 
+  padding: 2px 8px;
+  margin-left: -8px; 
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+/* --- FIN MODIFICATION --- */
+
+
 .result-item-lignes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .result-item-logo { width: 30px; height: 30px; border-radius: 50%; transition: transform 0.2s; }
 .result-item-logo:hover { transform: scale(1.1); }
@@ -293,6 +313,10 @@
     width: auto; 
     border-radius: 16px;
     border: 1px solid #e0e0e0;
+    /* Retour à la grille 1 colonne (liste) sur mobile */
+    display: block; 
+    gap: 0;
+    padding: 0;
   }
   .result-item { padding: 12px 16px; }
 }

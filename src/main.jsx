@@ -1,3 +1,4 @@
+// src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, useParams } from 'react-router-dom';
@@ -9,6 +10,8 @@ import PageDetailLigne from './PageDetailLigne.jsx';
 import PageRepertoire from './PageRepertoire.jsx';
 import PageDetailRame from './PageDetailRame.jsx';
 import PageCarte from './PageCarte.jsx';
+// --- AJOUT DE L'IMPORT ---
+import PageDetailStation from './PageDetailStation.jsx'; 
 
 import './index.css';
 
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: "carte",
         element: <PageCarte />,
+      },
+      // --- AJOUT DE LA NOUVELLE ROUTE ---
+      {
+        path: "station/:nom",
+        element: <PageDetailStation />,
       }
     ]
   },
