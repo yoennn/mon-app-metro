@@ -199,7 +199,10 @@
   /* État initial pour l'animation */
   opacity: 0;
   transform: translateY(-10px); 
-  clip-path: inset(0 100% 0 0); 
+
+  /* --- CORRECTION ANIMATION --- */
+  clip-path: inset(0 0 0 100%); /* S'ouvre de droite à gauche */
+  
   pointer-events: none;
   transition: opacity 0.2s ease-out, 
               transform 0.3s ease-out, 
@@ -222,13 +225,17 @@
 .header-search-results-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
 
 /* Styles pour les résultats (prompt, aucun résultat, items) */
+
+/* --- CORRECTION ALIGNEMENT TEXTE --- */
 .search-prompt,
 .search-no-results {
   padding: 24px;
   color: #6c757d;
-  text-align: center;
+  text-align: left;    /* MODIFIÉ: center -> left */
+  padding-left: 28px;  /* AJOUTÉ: pour aligner avec le texte des résultats */
   font-size: 1.1rem;
 }
+
 .result-item { padding: 12px 24px; border-bottom: 1px solid #f0f0f0; }
 .result-item:first-child { padding-top: 16px; }
 .result-item:last-child { border-bottom: none; padding-bottom: 16px; }
