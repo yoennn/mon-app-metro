@@ -1,6 +1,16 @@
 // src/data.js
 
 export const dataRames = {
+  "MP 89 CC": {
+    nomComplet: "Matériel Pneu 1989 (Conduite Conducteur)",
+    image: "mp89cc.png", // Assurez-vous d'avoir une image mp89cc.png dans vos assets
+    constructeur: "GEC Alsthom",
+    miseEnService: "1997",
+    vitesseMax: "80 km/h",
+    composition: "5 voitures (réduites)",
+    capacite: "~600 voyageurs",
+    descriptionLongue: "Version à Conduite Conducteur (CC) du MP 89. Ces rames ont équipé la Ligne 1 jusqu'à son automatisation en 2011. Elles ont ensuite été transférées sur la Ligne 4. Avec l'automatisation de la 4, les rames ont été raccourcies de 6 à 5 voitures et sont progressivement transférées sur la Ligne 6 pour remplacer les MP 73."
+  },
   "MP 05": {
     nomComplet: "Matériel Pneu 2005",
     image: "mp05.png",
@@ -29,7 +39,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "5 voitures (boa)",
     capacite: "~540 voyageurs",
-    descriptionLongue: "Le MF 01 (Matériel Fer 2001), aussi connu sous le nom de MF 2000, est le matériel fer moderne qui remplace les vieux MF 67 sur les lignes 2, 5 et 9. Conçu par Alstom et Bombardier, il introduit l'intercirculation intégrale (type 'boa'), la ventilation réfrigérée et une consommation d'énergie réduite de 30% grâce au freinage à récupération. Il offre des couloirs larges et des baies vitrées plus grandes pour un meilleur confort voyageur."
+    descriptionLongue: "Le MF 01 (Matériel Fer 2001), aussi connu sous le nom de MF 2000, est le matériel fer moderne qui remplace les vieux MF 67 sur les lignes 2, 5 et 9. Conçu par Alstom et Bombardier, il introduit l'intercirculation intégrale (type boa), la ventilation réfrigérée et une consommation d'énergie réduite de 30% grâce au freinage à récupération. Il offre des couloirs larges et des baies vitrées plus grandes pour un meilleur confort voyageur."
   },
   "MF 67": {
     nomComplet: "Matériel Fer 1967",
@@ -49,7 +59,7 @@ export const dataRames = {
     vitesseMax: "80 km/h",
     composition: "6 voitures (automatiques)",
     capacite: "~720 voyageurs",
-    descriptionLongue: "Premier matériel roulant entièrement automatique du métro parisien, le MP 89 CA (Conduite Automatique) a été conçu pour la Ligne 14 (Météor), inaugurée en 1998. Il est célèbre pour son design (par Roger Tallon), son intercirculation intégrale 'boa' et l'absence de loge de conduite, offrant une vue panoramique. Avec l'arrivée des rames MP 14 à 8 voitures sur la 14, tout le parc de MP 89 CA a été transféré sur la Ligne 4 pour son automatisation."
+    descriptionLongue: "Premier matériel roulant entièrement automatique du métro parisien, le MP 89 CA (Conduite Automatique) a été conçu pour la Ligne 14 (Météor), inaugurée en 1998. Il est célèbre pour son design (par Roger Tallon), son intercirculation intégrale boa et l'absence de loge de conduite, offrant une vue panoramique. Avec l'arrivée des rames MP 14 à 8 voitures sur la 14, tout le parc de MP 89 CA a été transféré sur la Ligne 4 pour son automatisation."
   },
   "MP 73": {
     nomComplet: "Matériel Pneu 1973",
@@ -79,7 +89,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "3 voitures",
     capacite: "~190 voyageurs",
-    descriptionLongue: "Série expérimentale unique (9 rames) conçue pour la Ligne 7bis, le MF 88 (Matériel Fer 1988) a servi de laboratoire pour des technologies issues du prototype 'BOA'. Sa principale innovation était ses essieux orientables, conçus pour réduire le bruit et l'usure dans les courbes très serrées de la ligne. Cette technologie s'est avérée fragile et coûteuse en entretien, menant à l'abandon du projet pour une production en grande série. Il sera remplacé par le MF 19."
+    descriptionLongue: "Série expérimentale unique (9 rames) conçue pour la Ligne 7bis, le MF 88 (Matériel Fer 1988) a servi de laboratoire pour des technologies issues du prototype BOA. Sa principale innovation était ses essieux orientables, conçus pour réduire le bruit et l'usure dans les courbes très serrées de la ligne. Cette technologie s'est avérée fragile et coûteuse en entretien, menant à l'abandon du projet pour une production en grande série. Il sera remplacé par le MF 19."
   },
   "MP 14 CC": {
     nomComplet: "Matériel Pneu 2014 (Conduite Conducteur)",
@@ -89,7 +99,7 @@ export const dataRames = {
     vitesseMax: "80 km/h",
     composition: "5 voitures (boa)",
     capacite: "~580 voyageurs",
-    descriptionLongue: "Version à Conduite Conducteur (CC) du nouveau matériel sur pneus MP 14. Déployée en 2023, cette version à 5 voitures avec intercirculation 'boa' a été commandée pour la Ligne 11, afin de remplacer les historiques MP 59 (les plus anciens du réseau à ce moment-là) et d'accompagner le prolongement de la ligne à l'Est."
+    descriptionLongue: "Version à Conduite Conducteur (CC) du nouveau matériel sur pneus MP 14. Déployée en 2023, cette version à 5 voitures avec intercirculation boa a été commandée pour la Ligne 11, afin de remplacer les historiques MP 59 (les plus anciens du réseau à ce moment-là) et d'accompagner le prolongement de la ligne à l'Est."
   },
   "MP 14 CA": {
     nomComplet: "Matériel Pneu 2014 (Conduite Automatique)",
@@ -109,7 +119,7 @@ export const dataRames = {
     vitesseMax: "85 km/h",
     composition: "5 voitures (boa)",
     capacite: "N/A (prototype)",
-    descriptionLongue: "Le MF 19 (Matériel Fer 2019) est le tout nouveau matériel sur fer destiné à remplacer les rames MF 67, MF 77 et MF 88 sur 8 lignes du réseau (3, 3bis, 7, 7bis, 8, 10, 12, 13). Le déploiement a commencé sur la Ligne 10 en 2025. Cette version 'CC' (Conduite Conducteur) est un train 'boa' (intercirculation) et sera déclinée en différentes longueurs pour s'adapter à chaque ligne. Une version automatique (CA) est aussi prévue."
+    descriptionLongue: "Le MF 19 (Matériel Fer 2019) est le tout nouveau matériel sur fer destiné à remplacer les rames MF 67, MF 77 et MF 88 sur 8 lignes du réseau (3, 3bis, 7, 7bis, 8, 10, 12, 13). Le déploiement a commencé sur la Ligne 10 en 2025. Cette version 'CC' (Conduite Conducteur) est un train boa (intercirculation) et sera déclinée en différentes longueurs pour s'adapter à chaque ligne. Une version automatique (CA) est aussi prévue."
   },
   "MR6V": {
     nomComplet: "Matériel Roulant 6 Voitures (GPE)",
@@ -158,7 +168,7 @@ export const lignesMetro = [
     terminus: ["Porte Dauphine", "Nation"],
     ouverture: "1900", stations: 25, longueur: "12,4 km",
     materiel: [
-      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Ces rames modernes (aussi appelées MF 2000) ont remplacé les MF 67 vieillissants, apportant plus de confort, la climatisation et l'intercirculation." }
+      { nom: "MF 01", description: "<strong>Rame boa climatisée à 5 voitures.</strong><br>Ces rames modernes (aussi appelées MF 2000) ont remplacé les MF 67 vieillissants, apportant plus de confort, la climatisation et l'intercirculation." }
     ]
   },
   { 
@@ -192,7 +202,7 @@ export const lignesMetro = [
     terminus: ["Bobigny–Pablo Picasso", "Place d'Italie"],
     ouverture: "1906", stations: 22, longueur: "14,6 km",
     materiel: [
-      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Tout comme la Ligne 2, la 5 a été équipée de ce matériel moderne pour remplacer les anciens MF 67." }
+      { nom: "MF 01", description: "<strong>Rame boa climatisée à 5 voitures.</strong><br>Tout comme la Ligne 2, la 5 a été équipée de ce matériel moderne pour remplacer les anciens MF 67." }
     ]
   },
   { 
@@ -200,7 +210,8 @@ export const lignesMetro = [
     terminus: ["Charles de Gaulle–Étoile", "Nation"],
     ouverture: "1909", stations: 28, longueur: "13,7 km",
     materiel: [
-      { nom: "MP 73", description: "<strong>Rame sur pneus à 5 voitures.</strong><br>Ce matériel a été conçu spécifiquement pour la Ligne 6 et ses nombreux viaducs. Ses bogies sont adaptés aux virages serrés." }
+      { nom: "MP 73", description: "<strong>Rame sur pneus à 5 voitures.</strong><br>Ce matériel a été conçu spécifiquement pour la Ligne 6 et ses nombreux viaducs. Ses bogies sont adaptés aux virages serrés." },
+      { nom: "MP 89 CC", description: "<strong>Rame boa à 5 voitures (ex-Ligne 4).</strong><br>Transférées après l'automatisation de la Ligne 4, ces rames sont raccourcies à 5 voitures." }
     ]
   },
   { 
@@ -232,7 +243,7 @@ export const lignesMetro = [
     terminus: ["Pont de Sèvres", "Mairie de Montreuil"],
     ouverture: "1922", stations: 37, longueur: "19,6 km",
     materiel: [
-      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Le déploiement de ces rames s'est achevé en 2016, remplaçant les MF 67 et modernisant cette ligne très fréquentée." }
+      { nom: "MF 01", description: "<strong>Rame boa climatisée à 5 voitures.</strong><br>Le déploiement de ces rames s'est achevé en 2016, remplaçant les MF 67 et modernisant cette ligne très fréquentée." }
     ]
   },
   { 
@@ -497,7 +508,7 @@ export const stationsData = [
     nom: "Bel-Air",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Belleville",
@@ -509,7 +520,7 @@ export const stationsData = [
     nom: "Bercy",
     lignes: ["6", "14"],
     resume: "",
-    materiel: ["MP 73", "MP 14 CA"]
+    materiel: ["MP 73", "MP 89 CC", "MP 14 CA"]
   },
   {
     nom: "Bérault",
@@ -533,7 +544,7 @@ export const stationsData = [
     nom: "Bir-Hakeim",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Blanche",
@@ -569,7 +580,7 @@ export const stationsData = [
     nom: "Boissière",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Bolivar",
@@ -653,7 +664,7 @@ export const stationsData = [
     nom: "Cambronne",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Campo Formio",
@@ -713,7 +724,7 @@ export const stationsData = [
     nom: "Charles de Gaulle–Étoile",
     lignes: ["1", "2", "6"],
     resume: "",
-    materiel: ["MP 05", "MF 01", "MP 73"]
+    materiel: ["MP 05", "MF 01", "MP 73", "MP 89 CC"]
   },
   {
     nom: "Charles Michels",
@@ -792,7 +803,7 @@ export const stationsData = [
     nom: "Chevaleret",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Chevilly-Larue",
@@ -864,7 +875,7 @@ export const stationsData = [
     nom: "Corvisart",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Coteaux Beauclair",
@@ -930,13 +941,13 @@ export const stationsData = [
     nom: "Daumesnil",
     lignes: ["6", "8"],
     resume: "",
-    materiel: ["MP 73", "MF 77"]
+    materiel: ["MP 73", "MP 89 CC", "MF 77"]
   },
   {
     nom: "Denfert-Rochereau",
     lignes: ["4", "6"],
     resume: "",
-    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73"]
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73", "MP 89 CC"]
   },
   {
     nom: "Drancy-Bobigny",
@@ -948,13 +959,13 @@ export const stationsData = [
     nom: "Dugommier",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Dupleix",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Duroc",
@@ -978,7 +989,7 @@ export const stationsData = [
     nom: "Edgar Quinet",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Église d'Auteuil",
@@ -1122,7 +1133,7 @@ export const stationsData = [
     nom: "Glacière",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Gonesse",
@@ -1236,7 +1247,7 @@ export const stationsData = [
     nom: "Kléber",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "La Chapelle",
@@ -1284,7 +1295,7 @@ export const stationsData = [
     nom: "La Motte-Picquet–Grenelle",
     lignes: ["6", "8", "10"],
     resume: "",
-    materiel: ["MP 73", "MF 77", "MF 67", "MF 19 CC"]
+    materiel: ["MP 73", "MP 89 CC", "MF 77", "MF 67", "MF 19 CC"]
   },
   {
     nom: "La Muette",
@@ -1632,7 +1643,7 @@ export const stationsData = [
     nom: "Montparnasse–Bienvenüe",
     lignes: ["4", "6", "12", "13"],
     resume: "",
-    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73", "MF 67", "MF 77"]
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73", "MP 89 CC", "MF 67", "MF 77"]
   },
   {
     nom: "Montreuil - Hôpital",
@@ -1662,13 +1673,13 @@ export const stationsData = [
     nom: "Nation",
     lignes: ["1", "2", "6", "9"],
     resume: "",
-    materiel: ["MP 05", "MF 01", "MP 73"]
+    materiel: ["MP 05", "MF 01", "MP 73", "MP 89 CC"]
   },
   {
     nom: "Nationale",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Nogent–Le Perreux",
@@ -1758,13 +1769,13 @@ export const stationsData = [
     nom: "Passy",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Pasteur",
     lignes: ["6", "12"],
     resume: "",
-    materiel: ["MP 73", "MF 67"]
+    materiel: ["MP 73", "MP 89 CC", "MF 67"]
   },
   {
     nom: "Pelleport",
@@ -1800,7 +1811,7 @@ export const stationsData = [
     nom: "Picpus",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Pierre et Marie Curie",
@@ -1818,7 +1829,7 @@ export const stationsData = [
     nom: "Place d'Italie",
     lignes: ["5", "6", "7"],
     resume: "",
-    materiel: ["MF 01", "MP 73", "MF 77"]
+    materiel: ["MF 01", "MP 73", "MP 89 CC", "MF 77"]
   },
   {
     nom: "Place de Clichy",
@@ -2070,7 +2081,7 @@ export const stationsData = [
     nom: "Quai de la Gare",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Quai de la Rapée",
@@ -2100,7 +2111,7 @@ export const stationsData = [
     nom: "Raspail",
     lignes: ["4", "6"],
     resume: "",
-    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73"]
+    materiel: ["MP 14 CA", "MP 05 IDFM", "MP 89 CA", "MP 73", "MP 89 CC"]
   },
   {
     nom: "Réaumur–Sébastopol",
@@ -2262,7 +2273,7 @@ export const stationsData = [
     nom: "Saint-Jacques",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Saint-Lazare",
@@ -2382,7 +2393,7 @@ export const stationsData = [
     nom: "Sèvres–Lecourbe",
     lignes: ["6"],
     resume: "",
-    materiel: ["MP 73"]
+    materiel: ["MP 73", "MP 89 CC"]
   },
   {
     nom: "Simplon",
@@ -2460,7 +2471,7 @@ export const stationsData = [
     nom: "Trocadéro",
     lignes: ["6", "9"],
     resume: "",
-    materiel: ["MP 73", "MF 01"]
+    materiel: ["MP 73", "MP 89 CC", "MF 01"]
   },
   {
     nom: "Tuileries",

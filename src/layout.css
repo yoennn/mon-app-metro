@@ -54,7 +54,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end; 
-  width: 44px; 
+  width: auto; /* MODIFIÉ: 44px -> auto */
   height: 50px; 
   
   /* --- MODIFICATION ICI --- */
@@ -68,11 +68,24 @@
   background: none;
   border: none;
   cursor: pointer;
-  width: 50px;
+  
+  /* --- MODIFIÉ ICI --- */
+  width: auto; /* 50px -> auto */
   height: 50px;
-  padding: 13px; 
+  padding: 0 16px; /* 13px -> 0 16px */
   box-sizing: border-box;
   flex-shrink: 0; 
+  
+  /* --- AJOUTS ICI --- */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s; /* Ajout d'un hover */
+  border-radius: 16px; /* Ajout pour le hover */
+}
+
+.header-search-toggle-btn:hover {
+  background-color: rgba(0,0,0,0.04); /* Léger fond au survol */
 }
 
 /* L'icône de la loupe */
@@ -81,6 +94,7 @@
   height: 24px;
   opacity: 0.8;
   transition: opacity 0.2s, transform 0.2s;
+  flex-shrink: 0; /* AJOUT */
 }
 .search-icon-loupe.hidden {
   opacity: 0;
@@ -115,6 +129,28 @@
 .search-icon-close span:nth-child(2) { transform: rotate(-45deg); }
 
 
+/* --- NOUVEAUX STYLES POUR LE TEXTE --- */
+.search-toggle-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  opacity: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  /* Animation d'apparition */
+  transition: opacity 0.2s ease-in 0.1s, width 0.2s ease-in-out, margin-left 0.2s ease-in-out;
+}
+
+.search-toggle-text.hidden {
+  opacity: 0;
+  width: 0; /* S'effondre sur lui-même */
+  margin-left: -8px; /* Cache le 'gap' du flex container */
+  /* Animation de disparition */
+  transition: opacity 0.1s ease-out, width 0.2s ease-out, margin-left 0.2s ease-out;
+}
+/* --- FIN NOUVEAUX STYLES --- */
+
+
 /* La barre de recherche (input) */
 .header-search-input {
   position: absolute;
@@ -130,7 +166,7 @@
   
   width: 0; 
   padding: 12px 20px;
-  padding-right: 50px; 
+  padding-right: 50px; /* Espace pour le bouton 'X' (qui fait 50x50) */
   
   font-size: 1rem;
   border: 1px solid transparent; 
@@ -178,20 +214,20 @@
   cursor: pointer;
 }
 
-/* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE (RETOUR À LA LISTE) --- */
+/* --- 7. PANNEAU DE RÉSULTATS DE RECHERCHE --- */
 .header-search-results-container {
   position: absolute; 
   top: 83px; 
   right: 152px; 
   width: 450px; 
   
-  background-color: #ffffff; /* Fond blanc */
+  background-color: #ffffff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 16px; 
-  overflow: hidden; /* Rétabli */
+  overflow: hidden; 
   
-  z-index: 950;
+  z-index: 950; /* Au-dessus du contenu, mais sous le logo (qui n'est plus à 950) */
   
   max-height: 70vh; 
   overflow-y: auto;
@@ -201,7 +237,7 @@
   transform: translateY(-10px); 
 
   /* --- CORRECTION ANIMATION --- */
-  clip-path: inset(0 0 0 100%); 
+  clip-path: inset(0 0 0 100%); /* S'ouvre de droite à gauche */
   
   pointer-events: none;
   transition: opacity 0.2s ease-out, 
@@ -225,12 +261,14 @@
 .header-search-results-container::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 4px; }
 
 /* Styles pour les résultats (prompt, aucun résultat, items) */
+
+/* --- CORRECTION ALIGNEMENT TEXTE --- */
 .search-prompt,
 .search-no-results {
   padding: 24px;
   color: #6c757d;
-  text-align: left;
-  padding-left: 28px;
+  text-align: left;    /* MODIFIÉ: center -> left */
+  padding-left: 28px;  /* AJOUTÉ: pour aligner avec le texte des résultats */
   font-size: 1.1rem;
 }
 
@@ -238,7 +276,6 @@
 .result-item:first-child { padding-top: 16px; }
 .result-item:last-child { border-bottom: none; padding-bottom: 16px; }
 
-/* --- MODIFICATION : CORRECTION DU HOVER --- */
 .result-item-titre-link {
   text-decoration: none;
   color: inherit;
@@ -258,8 +295,6 @@
   border-radius: 6px;
   transition: background-color 0.2s;
 }
-/* --- FIN MODIFICATION --- */
-
 
 .result-item-lignes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .result-item-logo { width: 30px; height: 30px; border-radius: 50%; transition: transform 0.2s; }
@@ -290,9 +325,14 @@
   }
   .header-search-toggle-btn {
     height: 44px;
-    width: 44px;
-    padding: 10px;
+    width: auto; /* MODIFIÉ */
+    padding: 0 12px; /* MODIFIÉ */
   }
+  /* Masquer le texte sur mobile pour garder juste l'icône */
+  .search-toggle-text {
+    display: none;
+  }
+  
   .search-icon-close {
     top: 10px;
     left: 10px;
@@ -313,10 +353,6 @@
     width: auto; 
     border-radius: 16px;
     border: 1px solid #e0e0e0;
-    /* Retour à la grille 1 colonne (liste) sur mobile */
-    display: block; 
-    gap: 0;
-    padding: 0;
   }
   .result-item { padding: 12px 16px; }
 }

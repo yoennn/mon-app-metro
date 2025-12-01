@@ -144,6 +144,11 @@ export default function Layout() {
               alt="Rechercher" 
               className={`search-icon-loupe ${rechercheOuvert ? 'hidden' : ''}`}
             />
+            {/* --- AJOUT DU TEXTE INTUITIF --- */}
+            <span className={`search-toggle-text ${rechercheOuvert ? 'hidden' : ''}`}>
+              Rechercher
+            </span>
+            {/* --- FIN DE L'AJOUT --- */}
             <div className={`search-icon-close ${rechercheOuvert ? 'visible' : ''}`}>
               <span></span>
               <span></span>
@@ -152,6 +157,7 @@ export default function Layout() {
         </div>
       </header>
 
+      {/* --- MODIFICATION ICI --- */}
       {/* Le conteneur est TOUJOURS là, c'est la classe .open qui le montre */}
       <div className={`header-search-results-container ${rechercheOuvert ? 'open' : ''}`}>
         {/* Le CONTENU, lui, reste conditionnel pour la performance */}
@@ -162,17 +168,13 @@ export default function Layout() {
         ) : (
           filteredStations.map(station => (
             <div key={station.nom} className="result-item"> 
-              
-              {/* --- MODIFICATION ICI --- */}
               <Link 
                 to={`/station/${station.nom}`} 
                 onClick={handleLinkClick}
-                className="result-item-titre-link" // Ajout d'une classe pour le style si besoin
+                className="result-item-titre-link"
               >
                 <h4 className="result-item-titre">{station.nom}</h4>
               </Link>
-              {/* --- FIN MODIFICATION --- */}
-
               <div className="result-item-lignes">
                 {station.lignes.map(id => (
                   <Link key={id} to={`/ligne/${id}`} onClick={handleLinkClick}>
@@ -197,6 +199,8 @@ export default function Layout() {
           ))
         )}
       </div>
+      {/* --- FIN MODIFICATION --- */}
+
       
       {/* Ajout de onClick={closeRecherche} pour fermer en cliquant sur le contenu */}
       <div className="page-container" onClick={closeRecherche}>
