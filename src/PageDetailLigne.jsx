@@ -1,7 +1,6 @@
 // src/PageDetailLigne.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-// --- MODIFICATION : Importer ligneColors ---
 import { lignesMetro, dataRames, ligneColors } from './data.js';
 import './PageDetailLigne.css';
 
@@ -10,8 +9,7 @@ function PageDetailLigne() {
   const ligne = lignesMetro.find(l => l.id == id); 
   const [animatingRame, setAnimatingRame] = useState(null); 
 
-  /* --- MODIFICATION ICI --- */
-  // Le hook ne bloque le scroll QUE sur PC
+  /* --- Le hook ne bloque le scroll QUE sur PC --- */
   useEffect(() => {
     // On vérifie qu'on n'est PAS sur un petit écran
     if (window.innerWidth > 768) {
@@ -22,7 +20,6 @@ function PageDetailLigne() {
     }
     // Sur mobile, on ne fait rien (le scroll reste normal)
   }, []); 
-  /* --- FIN MODIFICATION --- */
 
 
   if (!ligne) {
@@ -116,7 +113,12 @@ function PageDetailLigne() {
                     <h3>
                       <Link to={`/rame/${rame.nom}`}>{rame.nom}</Link>
                     </h3>
-                    <p>{rame.description}</p>
+                    
+                    {/* --- MODIFICATION ICI --- */}
+                    {/* On utilise dangerouslySetInnerHTML pour interpréter le HTML */}
+                    <p dangerouslySetInnerHTML={{ __html: rame.description }} />
+                    {/* --- FIN MODIFICATION --- */}
+
                   </div>
                 </div>
               );

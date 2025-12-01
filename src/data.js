@@ -9,7 +9,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "6 voitures (automatiques)",
     capacite: "~550 voyageurs",
-    descriptionLongue: "Le MP 05 est un matériel sur pneus entièrement automatique (CA) commandé pour équiper la ligne 1 lors de son automatisation. Il est techniquement très proche du MP 89 CA de la ligne 14."
+    descriptionLongue: "Le MP 05 (Matériel Pneu 2005) est un matériel sur pneus entièrement automatique (CA) commandé par la RATP pour équiper la Ligne 1 lors de son automatisation intégrale. Techniquement, il est une évolution directe du MP 89 CA de la Ligne 14, avec une nouvelle face avant et une livrée modernisée. L'automatisation de la Ligne 1, une première mondiale sur une ligne aussi ancienne et fréquentée sans interruption de trafic, a nécessité le déploiement de ces rames."
   },
   "MP 05 IDFM": {
     nomComplet: "Matériel Pneu 2005 (IDFM)",
@@ -19,7 +19,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "6 voitures (automatiques)",
     capacite: "~550 voyageurs",
-    descriptionLongue: "Ces rames MP 05, libérées de la ligne 1, ont été rénovées avec la livrée Île-de-France Mobilités et transférées sur la ligne 4 pour son automatisation."
+    descriptionLongue: "Ces rames sont techniquement identiques aux MP 05 de la Ligne 1. Elles proviennent du parc de cette ligne, libérées suite à l'arrivée des nouvelles rames MP 14. Dans le cadre de l'automatisation de la Ligne 4, ces rames ont été rénovées avec la livrée grise et bleue d'Île-de-France Mobilités (IDFM) et transférées progressivement sur la 4. Elles y circulent aux côtés des MP 89 CA et des MP 14 CA."
   },
   "MF 01": {
     nomComplet: "Matériel Fer 2001 (MF 2000)",
@@ -29,7 +29,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "5 voitures (boa)",
     capacite: "~540 voyageurs",
-    descriptionLongue: "Le MF 01 (ou MF 2000) est le matériel fer moderne qui remplace les MF 67 sur plusieurs lignes. Il est équipé de la climatisation et de l'intercirculation 'boa' entre les voitures."
+    descriptionLongue: "Le MF 01 (Matériel Fer 2001), aussi connu sous le nom de MF 2000, est le matériel fer moderne qui remplace les vieux MF 67 sur les lignes 2, 5 et 9. Conçu par Alstom et Bombardier, il introduit l'intercirculation intégrale (type 'boa'), la ventilation réfrigérée et une consommation d'énergie réduite de 30% grâce au freinage à récupération. Il offre des couloirs larges et des baies vitrées plus grandes pour un meilleur confort voyageur."
   },
   "MF 67": {
     nomComplet: "Matériel Fer 1967",
@@ -39,7 +39,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "5 voitures (ou 3 sur 3bis)",
     capacite: "~515 voyageurs (5v)",
-    descriptionLongue: "Série la plus nombreuse du métro parisien, le MF 67 a équipé la majorité des lignes sur fer. Malgré son âge, il reste fiable et a connu de nombreuses rénovations."
+    descriptionLongue: "Série la plus nombreuse jamais construite pour le métro parisien, le MF 67 (Matériel Fer 1967) est en service depuis 1967. Ayant équipé la majorité des lignes sur fer, il est le matériel le plus ancien du réseau (suite à la réforme des MP 59) et circule encore sur les lignes 3, 3bis, 10 et 12. Il a existé en de nombreuses sous-séries (A, B, D, E, F) avec différentes configurations. Il sera progressivement remplacé d'ici 2031 par le nouveau MF 19."
   },
   "MP 89 CA": {
     nomComplet: "Matériel Pneu 1989 (Conduite Automatique)",
@@ -49,7 +49,7 @@ export const dataRames = {
     vitesseMax: "80 km/h",
     composition: "6 voitures (automatiques)",
     capacite: "~720 voyageurs",
-    descriptionLongue: "Premier matériel automatique du métro parisien, conçu pour la ligne 14 (Météor). Ces rames à 6 voitures ont été transférées sur la ligne 4 lors de son automatisation."
+    descriptionLongue: "Premier matériel roulant entièrement automatique du métro parisien, le MP 89 CA (Conduite Automatique) a été conçu pour la Ligne 14 (Météor), inaugurée en 1998. Il est célèbre pour son design (par Roger Tallon), son intercirculation intégrale 'boa' et l'absence de loge de conduite, offrant une vue panoramique. Avec l'arrivée des rames MP 14 à 8 voitures sur la 14, tout le parc de MP 89 CA a été transféré sur la Ligne 4 pour son automatisation."
   },
   "MP 73": {
     nomComplet: "Matériel Pneu 1973",
@@ -59,7 +59,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "5 voitures",
     capacite: "~400 voyageurs",
-    descriptionLongue: "Conçu pour la ligne 6, le MP 73 est reconnaissable à ses bogies spécifiques adaptés aux virages serrés et au long parcours sur viaduc. Il remplaçait les anciens MP 55."
+    descriptionLongue: "Conçu spécifiquement pour la Ligne 6 en 1974, le MP 73 (Matériel Pneu 1973) est reconnaissable à son adaptation unique à cette ligne majoritairement aérienne. Il est équipé de bogies spéciaux pour mieux s'adapter aux virages serrés du viaduc et réduire le bruit. Malgré son âge, il a été rénové et reste indissociable de l'image de la ligne 6, remplaçant à l'époque les anciens MP 55."
   },
   "MF 77": {
     nomComplet: "Matériel Fer 1977",
@@ -69,7 +69,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "5 voitures",
     capacite: "~570 voyageurs",
-    descriptionLongue: "Le MF 77 a été conçu pour les lignes longues et à grande affluence (7, 8, 13). Son design 'en double Gothique' était novateur et il est toujours en service après plusieurs rénovations."
+    descriptionLongue: "Surnommé 'le requin' ou 'double Gothique' pour son design galbé novateur, le MF 77 (Matériel Fer 1977) a été conçu pour les lignes longues et à grande affluence avec des prolongements en banlieue (lignes 7, 8 et 13). Sa vitesse théorique de 100 km/h (limitée à 70) était une prouesse pour l'époque. Les rames de la Ligne 13 ont été lourdement rénovées pour accueillir le système de pilotage automatique OURAGAN."
   },
   "MF 88": {
     nomComplet: "Matériel Fer 1988",
@@ -79,7 +79,7 @@ export const dataRames = {
     vitesseMax: "70 km/h",
     composition: "3 voitures",
     capacite: "~190 voyageurs",
-    descriptionLongue: "Série expérimentale unique à la ligne 7bis, le MF 88 testait un système d'essieux orientables pour réduire le bruit et l'usure dans les courbes serrées. Il n'a pas été produit en grande série."
+    descriptionLongue: "Série expérimentale unique (9 rames) conçue pour la Ligne 7bis, le MF 88 (Matériel Fer 1988) a servi de laboratoire pour des technologies issues du prototype 'BOA'. Sa principale innovation était ses essieux orientables, conçus pour réduire le bruit et l'usure dans les courbes très serrées de la ligne. Cette technologie s'est avérée fragile et coûteuse en entretien, menant à l'abandon du projet pour une production en grande série. Il sera remplacé par le MF 19."
   },
   "MP 14 CC": {
     nomComplet: "Matériel Pneu 2014 (Conduite Conducteur)",
@@ -89,7 +89,7 @@ export const dataRames = {
     vitesseMax: "80 km/h",
     composition: "5 voitures (boa)",
     capacite: "~580 voyageurs",
-    descriptionLongue: "Version à conduite manuelle (CC) du MP 14, ce matériel à 5 voitures a été déployé sur la ligne 11 pour remplacer les vieux MP 59 et accompagner son prolongement."
+    descriptionLongue: "Version à Conduite Conducteur (CC) du nouveau matériel sur pneus MP 14. Déployée en 2023, cette version à 5 voitures avec intercirculation 'boa' a été commandée pour la Ligne 11, afin de remplacer les historiques MP 59 (les plus anciens du réseau à ce moment-là) et d'accompagner le prolongement de la ligne à l'Est."
   },
   "MP 14 CA": {
     nomComplet: "Matériel Pneu 2014 (Conduite Automatique)",
@@ -99,7 +99,7 @@ export const dataRames = {
     vitesseMax: "80 km/h",
     composition: "6 ou 8 voitures (boa, auto)",
     capacite: "+1000 voyageurs (8v)",
-    descriptionLongue: "Version automatique (CA) du MP 14. Elle existe en version 6 voitures (ligne 4) et 8 voitures (ligne 14), ce qui en fait les rames les plus longues du réseau parisien."
+    descriptionLongue: "Version à Conduite Automatique (CA) du MP 14. Ce matériel moderne sans cabine de conduite existe en deux longueurs : en version 8 voitures (les plus longues rames du réseau) pour la Ligne 14 afin d'accompagner ses prolongements et son trafic élevé, et en version 6 voitures pour la Ligne 4, où il complète le parc automatique aux côtés des MP 89 et MP 05."
   },
   "MF 19 CC": {
     nomComplet: "Matériel Fer 2019 (Conduite Conducteur)",
@@ -109,7 +109,7 @@ export const dataRames = {
     vitesseMax: "85 km/h",
     composition: "5 voitures (boa)",
     capacite: "N/A (prototype)",
-    descriptionLongue: "Le MF 19 est le futur matériel sur fer qui remplacera les MF 67, MF 77 et MF 88. Une rame est en test sur la ligne 10. Il existera en versions CC et CA."
+    descriptionLongue: "Le MF 19 (Matériel Fer 2019) est le tout nouveau matériel sur fer destiné à remplacer les rames MF 67, MF 77 et MF 88 sur 8 lignes du réseau (3, 3bis, 7, 7bis, 8, 10, 12, 13). Le déploiement a commencé sur la Ligne 10 en 2025. Cette version 'CC' (Conduite Conducteur) est un train 'boa' (intercirculation) et sera déclinée en différentes longueurs pour s'adapter à chaque ligne. Une version automatique (CA) est aussi prévue."
   },
   "MR6V": {
     nomComplet: "Matériel Roulant 6 Voitures (GPE)",
@@ -119,7 +119,7 @@ export const dataRames = {
     vitesseMax: "110 km/h",
     composition: "6 voitures (boa, auto)",
     capacite: "~1000 voyageurs",
-    descriptionLongue: "Matériel automatique à 6 voitures (MR6V) basé sur la plateforme Alstom Metropolis, conçu pour l'exploitation à haute capacité de la Ligne 15 du Grand Paris Express."
+    descriptionLongue: "Le MR6V (Matériel Roulant 6 Voitures) est le matériel automatique conçu par Alstom pour la Ligne 15 du Grand Paris Express. Il s'agit d'un métro lourd sur fer, alimenté par caténaire (1500V), mesurant 108 mètres de long et pouvant accueillir environ 1000 voyageurs. Il est conçu pour une exploitation à haute capacité avec une vitesse de pointe de 110 km/h."
   },
   "MR3V": {
     nomComplet: "Matériel Roulant 3 Voitures (GPE)",
@@ -129,7 +129,7 @@ export const dataRames = {
     vitesseMax: "110 km/h",
     composition: "3 voitures (boa, auto)",
     capacite: "~500 voyageurs",
-    descriptionLongue: "Version plus courte (MR3V) du nouveau matériel automatique du GPE, destinée aux lignes 16 et 17."
+    descriptionLongue: "Le MR3V (Matériel Roulant 3 Voitures) est la version courte du matériel automatique du Grand Paris Express. Basé sur la même plateforme Alstom que le MR6V, il mesure 54 mètres de long pour une capacité d'environ 500 voyageurs. Il est destiné aux lignes 16 et 17 du GPE, qui ont un trafic attendu moins dense que la Ligne 15."
   },
   "MRV": {
     nomComplet: "Matériel Roulant Vitesse (GPE)",
@@ -139,7 +139,7 @@ export const dataRames = {
     vitesseMax: "120 km/h",
     composition: "3 voitures (auto)",
     capacite: "N/A",
-    descriptionLongue: "Matériel automatique de type métro léger conçu pour la Ligne 18, capable d'atteindre des vitesses plus élevées sur de longues interstations."
+    descriptionLongue: "Le MRV (Matériel Roulant Vitesse) est le matériel automatique spécifique à la Ligne 18 du Grand Paris Express. Contrairement aux MR6V/3V, il s'agit d'un métro léger alimenté par 3ème rail, conçu pour de hautes vitesses (jusqu'à 100-120 km/h) sur de longues interstations, notamment sur le plateau de Saclay."
   }
 };
 
@@ -150,7 +150,7 @@ export const lignesMetro = [
     terminus: ["La Défense", "Château de Vincennes"],
     ouverture: "1900", stations: 25, longueur: "16,6 km",
     materiel: [ 
-      { nom: "MP 05", description: "Rames automatiques à 6 voitures." }
+      { nom: "MP 05", description: "<strong>Rame automatique (CA) à 6 voitures.</strong><br>Déployées lors de l'automatisation intégrale de la ligne (2008-2011), elles remplacent les anciennes rames MP 89 CC (à conduite manuelle)." }
     ]
   },
   { 
@@ -158,7 +158,7 @@ export const lignesMetro = [
     terminus: ["Porte Dauphine", "Nation"],
     ouverture: "1900", stations: 25, longueur: "12,4 km",
     materiel: [
-      { nom: "MF 01", description: "Rames boa climatisées à 5 voitures." }
+      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Ces rames modernes (aussi appelées MF 2000) ont remplacé les MF 67 vieillissants, apportant plus de confort, la climatisation et l'intercirculation." }
     ]
   },
   { 
@@ -166,7 +166,7 @@ export const lignesMetro = [
     terminus: ["Pont de Levallois", "Gallieni"],
     ouverture: "1904", stations: 25, longueur: "11,7 km",
     materiel: [
-      { nom: "MF 67", description: "Rames à 5 voitures, en cours de remplacement par des MF 19." }
+      { nom: "MF 67", description: "<strong>Rame historique à 5 voitures.</strong><br>Matériel emblématique du réseau, il est en service sur la 3 depuis les années 70. Il est en cours de remplacement progressif par le nouveau MF 19." }
     ]
   },
   { 
@@ -174,7 +174,7 @@ export const lignesMetro = [
     terminus: ["Gambetta", "Porte des Lilas"],
     ouverture: "1921 (1971 en 3bis)", stations: 4, longueur: "1,3 km",
     materiel: [
-      { nom: "MF 67", description: "Rames courtes à 3 voitures, ex-Ligne 9." }
+      { nom: "MF 67", description: "<strong>Rame courte à 3 voitures.</strong><br>Ces rames spécifiques proviennent de la Ligne 9 et ont été adaptées à la très faible fréquentation de la plus petite ligne du réseau." }
     ]
   },
   { 
@@ -182,9 +182,9 @@ export const lignesMetro = [
     terminus: ["Porte de Clignancourt", "Bagneux–Lucie Aubrac"],
     ouverture: "1908", stations: 29, longueur: "14 km",
     materiel: [
-      { nom: "MP 14 CA", description: "Rames automatiques à 6 voitures." },
-      { nom: "MP 05 IDFM", description: "Rames automatiques à 6 voitures (ex-Ligne 1)." },
-      { nom: "MP 89 CA", description: "Rames automatiques à 6 voitures (ex-Ligne 14)." }
+      { nom: "MP 14 CA", description: "<strong>Rame automatique (CA) neuve à 6 voitures.</strong><br>Déployées pour finaliser l'automatisation et augmenter la capacité de la ligne." },
+      { nom: "MP 05 IDFM", description: "<strong>Rame automatique (CA) rénovée à 6 voitures.</strong><br>Provenant de la Ligne 1, elles ont été transférées et rénovées pour l'automatisation de la 4." },
+      { nom: "MP 89 CA", description: "<strong>Rame automatique (CA) à 6 voitures.</strong><br>Historiques de la Ligne 14, elles ont été transférées sur la 4 après l'arrivée des MP 14 (8 voitures) sur la 14." }
     ]
   },
   { 
@@ -192,7 +192,7 @@ export const lignesMetro = [
     terminus: ["Bobigny–Pablo Picasso", "Place d'Italie"],
     ouverture: "1906", stations: 22, longueur: "14,6 km",
     materiel: [
-      { nom: "MF 01", description: "Rames boa climatisées à 5 voitures." }
+      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Tout comme la Ligne 2, la 5 a été équipée de ce matériel moderne pour remplacer les anciens MF 67." }
     ]
   },
   { 
@@ -200,7 +200,7 @@ export const lignesMetro = [
     terminus: ["Charles de Gaulle–Étoile", "Nation"],
     ouverture: "1909", stations: 28, longueur: "13,7 km",
     materiel: [
-      { nom: "MP 73", description: "Rames sur pneus à 5 voitures, rénovées." }
+      { nom: "MP 73", description: "<strong>Rame sur pneus à 5 voitures.</strong><br>Ce matériel a été conçu spécifiquement pour la Ligne 6 et ses nombreux viaducs. Ses bogies sont adaptés aux virages serrés." }
     ]
   },
   { 
@@ -208,7 +208,7 @@ export const lignesMetro = [
     terminus: ["La Courneuve–8 Mai 1945", "Mairie d'Ivry / Villejuif"],
     ouverture: "1910", stations: 38, longueur: "22,5 km",
     materiel: [
-      { nom: "MF 77", description: "Rames à 5 voitures, en cours de rénovation." }
+      { nom: "MF 77", description: "<strong>Rame à 5 voitures (design 'requin').</strong><br>Conçues pour les lignes longues avec des branches, elles sont en service sur la 7 depuis 1979 et sont actuellement en cours de rénovation." }
     ]
   },
   { 
@@ -216,7 +216,7 @@ export const lignesMetro = [
     terminus: ["Louis Blanc", "Pré-Saint-Gervais"],
     ouverture: "1911 (1967 en 7bis)", stations: 8, longueur: "3,1 km",
     materiel: [
-      { nom: "MF 88", description: "Rames expérimentales à 3 voitures." }
+      { nom: "MF 88", description: "<strong>Rame expérimentale à 3 voitures.</strong><br>Prototype unique à 9 exemplaires, il testait des essieux orientables pour les virages serrés de la ligne. Il sera remplacé par le MF 19." }
     ]
   },
   { 
@@ -224,7 +224,7 @@ export const lignesMetro = [
     terminus: ["Balard", "Pointe du Lac"],
     ouverture: "1913", stations: 38, longueur: "23,4 km",
     materiel: [
-      { nom: "MF 77", description: "Rames à 5 voitures." }
+      { nom: "MF 77", description: "<strong>Rame à 5 voitures (design 'requin').</strong><br>Matériel historique de la ligne, conçu pour les longs trajets de banlieue à banlieue." }
     ]
   },
   { 
@@ -232,7 +232,7 @@ export const lignesMetro = [
     terminus: ["Pont de Sèvres", "Mairie de Montreuil"],
     ouverture: "1922", stations: 37, longueur: "19,6 km",
     materiel: [
-      { nom: "MF 01", description: "Rames boa climatisées à 5 voitures." }
+      { nom: "MF 01", description: "<strong>Rame 'boa' climatisée à 5 voitures.</strong><br>Le déploiement de ces rames s'est achevé en 2016, remplaçant les MF 67 et modernisant cette ligne très fréquentée." }
     ]
   },
   { 
@@ -240,8 +240,8 @@ export const lignesMetro = [
     terminus: ["Boulogne–Pont de St-Cloud", "Gare d'Austerlitz"],
     ouverture: "1913", stations: 23, longueur: "11,7 km",
     materiel: [
-      { nom: "MF 67", description: "Rames à 5 voitures." },
-      { nom: "MF 19 CC", description: "Une rame prototype en test (Conduite Conducteur)." }
+      { nom: "MF 67", description: "<strong>Rame historique à 5 voitures.</strong><br>C'est l'une des dernières lignes à être entièrement équipée de ce matériel fiable mais vieillissant." },
+      { nom: "MF 19 CC", description: "<strong>Prototype du nouveau matériel (Conduite Conducteur).</strong><br>La Ligne 10 sert de base de test pour la première rame MF 19 qui remplacera les MF 67." }
     ]
   },
   { 
@@ -249,7 +249,7 @@ export const lignesMetro = [
     terminus: ["Châtelet", "Rosny–Bois-Perrier"],
     ouverture: "1935", stations: 19, longueur: "11,7 km",
     materiel: [
-      { nom: "MP 14 CC", description: "Rames neuves sur pneus à 5 voitures (Conduite Conducteur)." }
+      { nom: "MP 14 CC", description: "<strong>Rame sur pneus neuve à 5 voitures (Conduite Conducteur).</strong><br>Déployées en 2023 pour le prolongement de la ligne et le remplacement des très anciens MP 59." }
     ]
   },
   { 
@@ -257,7 +257,7 @@ export const lignesMetro = [
     terminus: ["Mairie d'Aubervilliers", "Mairie d'Issy"],
     ouverture: "1910", stations: 29, longueur: "17,2 km",
     materiel: [
-      { nom: "MF 67", description: "Rames à 5 voitures." }
+      { nom: "MF 67", description: "<strong>Rame historique à 5 voitures.</strong><br>Identifiable à sa livrée spécifique (bleu et gris), ce matériel équipe la ligne depuis les années 70 et sera remplacé par le MF 19." }
     ]
   },
   { 
@@ -265,7 +265,7 @@ export const lignesMetro = [
     terminus: ["Asnières–Gennevilliers / St-Denis", "Châtillon–Montrouge"],
     ouverture: "1911", stations: 32, longueur: "24,4 km",
     materiel: [
-      { nom: "MF 77", description: "Rames à 5 voitures." }
+      { nom: "MF 77", description: "<strong>Rame à 5 voitures (rénovée IDFM).</strong><br>Ces rames ont été rénovées (livrée IDFM) et équipées du pilotage automatique OURAGAN pour gérer la saturation de la ligne." }
     ]
   },
   { 
@@ -273,7 +273,7 @@ export const lignesMetro = [
     terminus: ["Saint-Denis Pleyel", "Aéroport d'Orly"],
     ouverture: "1998", stations: 20, longueur: "27,8 km",
     materiel: [
-      { nom: "MP 14 CA", description: "Rames automatiques à 8 voitures." }
+      { nom: "MP 14 CA", description: "<strong>Rame automatique (CA) longue à 8 voitures.</strong><br>Ce sont les rames les plus longues (120m) et les plus récentes du réseau, déployées pour les prolongements Nord et Sud." }
     ]
   },
   { 
@@ -281,7 +281,7 @@ export const lignesMetro = [
     terminus: ["Pont de Sèvres", "Noisy–Champs"],
     ouverture: "Prévue 2026", stations: 36, longueur: "33 km",
     materiel: [
-      { nom: "MR6V", description: "Futures rames automatiques à 6 voitures." }
+      { nom: "MR6V", description: "<strong>Rame automatique à 6 voitures (108m).</strong><br>Futur matériel lourd sur fer, à grand gabarit, conçu pour la haute capacité de la rocade GPE." }
     ]
   },
   { 
@@ -289,7 +289,7 @@ export const lignesMetro = [
     terminus: ["Saint-Denis Pleyel", "Noisy–Champs"],
     ouverture: "Prévue 2026", stations: 10, longueur: "29 km",
     materiel: [
-      { nom: "MR3V", description: "Futures rames automatiques à 3 voitures." }
+      { nom: "MR3V", description: "<strong>Rame automatique à 3 voitures (54m).</strong><br>Version plus courte du matériel GPE, adaptée à un trafic moins dense que la ligne 15." }
     ]
   },
   { 
@@ -297,7 +297,7 @@ export const lignesMetro = [
     terminus: ["Saint-Denis Pleyel", "Le Mesnil-Amelot"],
     ouverture: "Prévue 2026", stations: 9, longueur: "26,5 km",
     materiel: [
-      { nom: "MR3V", description: "Futures rames automatiques à 3 voitures." }
+      { nom: "MR3V", description: "<strong>Rame automatique à 3 voitures (54m).</strong><br>Même matériel que la ligne 16, destiné à desservir les aéroports du Bourget et de Roissy." }
     ]
   },
   { 
@@ -305,7 +305,7 @@ export const lignesMetro = [
     terminus: ["Aéroport d'Orly", "Versailles Chantiers"],
     ouverture: "Prévue 2027", stations: 10, longueur: "35 km",
     materiel: [
-      { nom: "MRV", description: "Futures rames automatiques rapides." }
+      { nom: "MRV", description: "<strong>Rame automatique rapide (Métro léger).</strong><br>Matériel spécifique alimenté par 3e rail, conçu pour de hautes vitesses (120 km/h) sur le plateau de Saclay." }
     ]
   }
 ];
@@ -330,7 +330,7 @@ export const ligneColors = {
   "14": "#62259D",
   "15": "#DE005C",
   "16": "#F1B19B",
-  "17": "#d6ca01",
+  "17": "#944D9B",
   "18": "#339999",
 };
 
